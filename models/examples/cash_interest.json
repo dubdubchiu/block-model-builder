@@ -1,0 +1,235 @@
+{
+ "schemaVersion": 1,
+ "id": "d14037a1-510e-5a9e-82ab-404ec395c82c",
+ "name": "Example: interest on the cash balance (feedback loop)",
+ "timeline": {
+  "start": "2027-01-01",
+  "frequency": "quarter",
+  "periods": 12,
+  "fiscal_year_end": "12-31"
+ },
+ "blocks": [
+  {
+   "uuid": "81199d5f-16b2-566e-b0b8-e92356c655e8",
+   "spec": "source.constant@1",
+   "label": "Opening cash",
+   "inline": {},
+   "settings": {
+    "value": 1000000,
+    "kind": "currency",
+    "unit": "USD"
+   },
+   "position": {
+    "x": 0.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "247dee67-fc95-54e3-a3e5-cef3c4cc1dac",
+   "spec": "source.constant@1",
+   "label": "Interest rate per quarter",
+   "inline": {},
+   "settings": {
+    "value": 0.02,
+    "kind": "percent",
+    "unit": null
+   },
+   "position": {
+    "x": 380.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "c87637d4-d4d6-5f24-88a2-e3f2eb3774e0",
+   "spec": "source.series@1",
+   "label": "Operating cash flow",
+   "inline": {},
+   "settings": {
+    "values": [
+     -150000,
+     -120000,
+     -80000,
+     -40000,
+     0,
+     40000,
+     80000,
+     120000,
+     160000,
+     200000,
+     240000,
+     280000
+    ],
+    "kind": "currency",
+    "unit": "USD"
+   },
+   "position": {
+    "x": 760.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "d3fe7045-0785-5cc5-bc4a-ca0e06ccc3eb",
+   "spec": "series.feedback@1",
+   "label": "Cash at start of quarter",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 380.0,
+    "y": 232.0
+   }
+  },
+  {
+   "uuid": "6629e789-73f1-50b0-a975-04c8a8a23a6c",
+   "spec": "math.multiply@1",
+   "label": "Interest earned",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 760.0,
+    "y": 232.0
+   }
+  },
+  {
+   "uuid": "50e90354-7c49-571e-9eb1-3e790735c7ad",
+   "spec": "math.add@1",
+   "label": "Net cash flow",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 1140.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "6f2337e9-fbd9-515b-84c5-87332b2a51ce",
+   "spec": "math.add@1",
+   "label": "Cash at end of quarter",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 1520.0,
+    "y": 0.0
+   }
+  }
+ ],
+ "wires": [
+  {
+   "uuid": "14d275b3-fea6-5790-9838-ce342762f602",
+   "from": {
+    "block": "81199d5f-16b2-566e-b0b8-e92356c655e8",
+    "port": "value"
+   },
+   "to": {
+    "block": "d3fe7045-0785-5cc5-bc4a-ca0e06ccc3eb",
+    "port": "initial"
+   }
+  },
+  {
+   "uuid": "26082d13-c391-54bf-abfd-92cb1db9ea71",
+   "from": {
+    "block": "d3fe7045-0785-5cc5-bc4a-ca0e06ccc3eb",
+    "port": "value"
+   },
+   "to": {
+    "block": "6629e789-73f1-50b0-a975-04c8a8a23a6c",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "d2ede847-2ba5-5a6d-b60c-562b0e9a5c77",
+   "from": {
+    "block": "247dee67-fc95-54e3-a3e5-cef3c4cc1dac",
+    "port": "value"
+   },
+   "to": {
+    "block": "6629e789-73f1-50b0-a975-04c8a8a23a6c",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "e4554604-af73-54d7-8abb-503683dbd04c",
+   "from": {
+    "block": "c87637d4-d4d6-5f24-88a2-e3f2eb3774e0",
+    "port": "value"
+   },
+   "to": {
+    "block": "50e90354-7c49-571e-9eb1-3e790735c7ad",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "e9a8cddf-0909-5a02-be5b-68810eb0e7bc",
+   "from": {
+    "block": "6629e789-73f1-50b0-a975-04c8a8a23a6c",
+    "port": "result"
+   },
+   "to": {
+    "block": "50e90354-7c49-571e-9eb1-3e790735c7ad",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "9ff05efd-a36d-5085-8090-274af0f2b830",
+   "from": {
+    "block": "d3fe7045-0785-5cc5-bc4a-ca0e06ccc3eb",
+    "port": "value"
+   },
+   "to": {
+    "block": "6f2337e9-fbd9-515b-84c5-87332b2a51ce",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "08046720-b84a-5284-8117-77cf25a7da5a",
+   "from": {
+    "block": "50e90354-7c49-571e-9eb1-3e790735c7ad",
+    "port": "result"
+   },
+   "to": {
+    "block": "6f2337e9-fbd9-515b-84c5-87332b2a51ce",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "fd5f4f67-8dd1-59dd-883a-681843eec2dc",
+   "from": {
+    "block": "6f2337e9-fbd9-515b-84c5-87332b2a51ce",
+    "port": "result"
+   },
+   "to": {
+    "block": "d3fe7045-0785-5cc5-bc4a-ca0e06ccc3eb",
+    "port": "x"
+   }
+  }
+ ],
+ "report": [
+  {
+   "block": "6629e789-73f1-50b0-a975-04c8a8a23a6c",
+   "port": "result",
+   "label": "Interest earned",
+   "format": "$#,##0"
+  },
+  {
+   "block": "6f2337e9-fbd9-515b-84c5-87332b2a51ce",
+   "port": "result",
+   "label": "Cash at end of quarter",
+   "format": "$#,##0"
+  }
+ ],
+ "scenarios": [
+  {
+   "id": "high-rate",
+   "name": "Interest at 3% per quarter",
+   "overrides": [
+    {
+     "block": "247dee67-fc95-54e3-a3e5-cef3c4cc1dac",
+     "inline": {},
+     "settings": {
+      "value": 0.03
+     }
+    }
+   ]
+  }
+ ],
+ "composites": []
+}

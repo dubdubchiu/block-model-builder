@@ -1,0 +1,22 @@
+{
+  "id": "series.annual",
+  "version": 1,
+  "title": "Aggregate to year",
+  "category": "Series",
+  "doc": "Sums each fiscal year's periods.",
+  "inputs": [
+    {
+      "name": "x",
+      "type": "number"
+    }
+  ],
+  "settings": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "annual<number>"
+    }
+  ],
+  "impl": "series.annual",
+  "causal": false
+}

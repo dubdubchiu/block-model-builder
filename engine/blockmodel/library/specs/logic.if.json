@@ -1,0 +1,31 @@
+{
+  "id": "logic.if",
+  "version": 1,
+  "title": "If",
+  "category": "Logic",
+  "doc": "then where condition is TRUE, else elsewhere. Both branches are computed.",
+  "inputs": [
+    {
+      "name": "condition",
+      "type": "bool"
+    },
+    {
+      "name": "then",
+      "type": "any",
+      "inline": 0
+    },
+    {
+      "name": "else",
+      "type": "any",
+      "inline": 0
+    }
+  ],
+  "settings": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "any"
+    }
+  ],
+  "impl": "logic.if"
+}

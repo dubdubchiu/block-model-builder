@@ -1,0 +1,57 @@
+{
+  "id": "math.sum",
+  "version": 1,
+  "title": "Sum",
+  "category": "Math",
+  "doc": "Adds up to eight inputs; unwired inputs are skipped.",
+  "inputs": [
+    {
+      "name": "in1",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "in2",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "in3",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "in4",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "in5",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "in6",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "in7",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "in8",
+      "type": "number",
+      "required": false
+    }
+  ],
+  "settings": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "number"
+    }
+  ],
+  "impl": "math.sum"
+}

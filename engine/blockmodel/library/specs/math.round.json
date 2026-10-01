@@ -1,0 +1,26 @@
+{
+  "id": "math.round",
+  "version": 1,
+  "title": "Round",
+  "category": "Math",
+  "doc": "Rounds to digits decimal places, half away from zero like Excel.",
+  "inputs": [
+    {
+      "name": "x",
+      "type": "number"
+    },
+    {
+      "name": "digits",
+      "type": "scalar<integer>",
+      "inline": 0
+    }
+  ],
+  "settings": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "number"
+    }
+  ],
+  "impl": "math.round"
+}

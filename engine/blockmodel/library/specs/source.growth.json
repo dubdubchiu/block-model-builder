@@ -1,0 +1,27 @@
+{
+  "id": "source.growth",
+  "version": 1,
+  "title": "Growth",
+  "category": "Sources",
+  "doc": "start * (1 + rate)^(t - 1): compounding from period 1. The rate is per period.",
+  "inputs": [
+    {
+      "name": "start",
+      "type": "number",
+      "inline": 1
+    },
+    {
+      "name": "rate",
+      "type": "number",
+      "inline": 0
+    }
+  ],
+  "settings": [],
+  "outputs": [
+    {
+      "name": "value",
+      "type": "series<number>"
+    }
+  ],
+  "impl": "source.growth"
+}

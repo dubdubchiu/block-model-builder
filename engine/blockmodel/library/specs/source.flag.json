@@ -1,0 +1,27 @@
+{
+  "id": "source.flag",
+  "version": 1,
+  "title": "Period flag",
+  "category": "Sources",
+  "doc": "TRUE from period start to period end, inclusive; FALSE elsewhere.",
+  "inputs": [
+    {
+      "name": "start",
+      "type": "scalar<integer>",
+      "inline": 1
+    },
+    {
+      "name": "end",
+      "type": "scalar<integer>",
+      "inline": 1
+    }
+  ],
+  "settings": [],
+  "outputs": [
+    {
+      "name": "value",
+      "type": "series<bool>"
+    }
+  ],
+  "impl": "source.flag"
+}

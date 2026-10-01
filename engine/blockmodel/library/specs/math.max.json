@@ -1,0 +1,25 @@
+{
+  "id": "math.max",
+  "version": 1,
+  "title": "Max",
+  "category": "Math",
+  "doc": "The larger of a and b, per period.",
+  "inputs": [
+    {
+      "name": "a",
+      "type": "number"
+    },
+    {
+      "name": "b",
+      "type": "number"
+    }
+  ],
+  "settings": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "number"
+    }
+  ],
+  "impl": "math.max"
+}

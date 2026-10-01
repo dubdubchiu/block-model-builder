@@ -1,0 +1,27 @@
+{
+  "id": "source.step",
+  "version": 1,
+  "title": "Step",
+  "category": "Sources",
+  "doc": "value from period from_period onward, 0 before.",
+  "inputs": [
+    {
+      "name": "value",
+      "type": "number",
+      "inline": 1
+    },
+    {
+      "name": "from_period",
+      "type": "scalar<integer>",
+      "inline": 1
+    }
+  ],
+  "settings": [],
+  "outputs": [
+    {
+      "name": "value",
+      "type": "series<number>"
+    }
+  ],
+  "impl": "source.step"
+}

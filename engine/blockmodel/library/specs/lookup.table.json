@@ -1,0 +1,61 @@
+{
+  "id": "lookup.table",
+  "version": 1,
+  "title": "Lookup",
+  "category": "Lookup",
+  "doc": "Looks x up in a table: step returns the value for the largest key at or below x (tiered pricing); linear interpolates between keys. Below the first key gives the first value; above the last gives the last.",
+  "inputs": [
+    {
+      "name": "x",
+      "type": "number"
+    }
+  ],
+  "settings": [
+    {
+      "name": "keys",
+      "type": "list",
+      "default": [],
+      "doc": "Ascending numbers."
+    },
+    {
+      "name": "values",
+      "type": "list",
+      "default": [],
+      "doc": "One value per key."
+    },
+    {
+      "name": "mode",
+      "type": "str",
+      "default": "step",
+      "options": [
+        "step",
+        "linear"
+      ]
+    },
+    {
+      "name": "kind",
+      "type": "str",
+      "default": "float",
+      "options": [
+        "float",
+        "int",
+        "count",
+        "quantity",
+        "percent",
+        "currency"
+      ]
+    },
+    {
+      "name": "unit",
+      "type": "str",
+      "default": null
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "number"
+    }
+  ],
+  "impl": "lookup.table"
+}

@@ -1,0 +1,41 @@
+# Render Blueprint: production on main, staging on staging. dev and session branches never deploy.
+# Secrets aren't in this file: Render prompts for BM_AUTH_USER when the Blueprint is created
+# (sync: false) and generates BM_AUTH_PASSWORD (read it in the service's Environment page).
+services:
+  - type: web
+    name: block-model-builder
+    runtime: docker
+    branch: main
+    region: oregon
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    disk:
+      name: bm-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: BM_AUTH_USER
+        sync: false
+      - key: BM_AUTH_PASSWORD
+        generateValue: true
+
+  # Free plan: no disk (Render doesn't allow one on free), so saves on staging are lost on each
+  # deploy and when the instance spins down after idling.
+  - type: web
+    name: block-model-builder-staging
+    runtime: docker
+    branch: staging
+    region: oregon
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: BM_AUTH_USER
+        sync: false
+      - key: BM_AUTH_PASSWORD
+        generateValue: true

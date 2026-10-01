@@ -1,0 +1,26 @@
+{
+  "id": "finance.depreciation_sl",
+  "version": 1,
+  "title": "Straight-line depreciation",
+  "category": "Finance",
+  "doc": "Each period's capex spread evenly over life periods, starting in the period it's spent.",
+  "inputs": [
+    {
+      "name": "capex",
+      "type": "number"
+    },
+    {
+      "name": "life",
+      "type": "scalar<integer>",
+      "inline": 1
+    }
+  ],
+  "settings": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "series<number>"
+    }
+  ],
+  "impl": "finance.depreciation_sl"
+}

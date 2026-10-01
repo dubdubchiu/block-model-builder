@@ -1,0 +1,25 @@
+{
+  "id": "math.divide",
+  "version": 1,
+  "title": "Divide",
+  "category": "Math",
+  "doc": "a / b, per period. A zero denominator is an error; use Safe divide to supply a fallback.",
+  "inputs": [
+    {
+      "name": "a",
+      "type": "number"
+    },
+    {
+      "name": "b",
+      "type": "number"
+    }
+  ],
+  "settings": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "number"
+    }
+  ],
+  "impl": "math.divide"
+}

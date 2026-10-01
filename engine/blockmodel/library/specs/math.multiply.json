@@ -1,0 +1,27 @@
+{
+  "id": "math.multiply",
+  "version": 1,
+  "title": "Multiply",
+  "category": "Math",
+  "doc": "a * b, per period. Currency times a count, quantity or percent stays currency.",
+  "inputs": [
+    {
+      "name": "a",
+      "type": "number",
+      "inline": 1
+    },
+    {
+      "name": "b",
+      "type": "number",
+      "inline": 1
+    }
+  ],
+  "settings": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "number"
+    }
+  ],
+  "impl": "math.multiply"
+}

@@ -1,0 +1,4852 @@
+{
+ "schemaVersion": 1,
+ "id": "127ede8f-063a-54ce-8365-09e72155074c",
+ "name": "Reference model: saas_company",
+ "timeline": {
+  "start": "2027-01-01",
+  "frequency": "quarter",
+  "periods": 32,
+  "fiscal_year_end": "12-31"
+ },
+ "blocks": [
+  {
+   "uuid": "ba51f12d-6214-53ae-b663-0ef2093554f4",
+   "spec": "source.constant@1",
+   "label": "Customers at start of period 1",
+   "inline": {},
+   "settings": {
+    "value": 400,
+    "kind": "quantity",
+    "unit": "customers",
+    "source": "illustrative",
+    "notes": ""
+   },
+   "position": {
+    "x": 1520.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "140e8edd-5f1a-53a8-9ab5-e8a9f8f97f7b",
+   "spec": "source.series@1",
+   "label": "Marketing spend",
+   "inline": {},
+   "settings": {
+    "values": [
+     600000,
+     700000,
+     800000,
+     900000,
+     1000000,
+     1100000,
+     1200000,
+     1300000,
+     1400000,
+     1500000,
+     1600000,
+     1700000,
+     1800000,
+     1900000,
+     2000000,
+     2100000,
+     2200000,
+     2260000,
+     2320000,
+     2380000,
+     2440000,
+     2500000,
+     2560000,
+     2620000,
+     2680000,
+     2740000,
+     2800000,
+     2860000,
+     2920000,
+     2980000,
+     3040000,
+     3100000
+    ],
+    "kind": "currency",
+    "unit": "USD",
+    "source": "illustrative",
+    "notes": "Paid acquisition, events and content, per quarter."
+   },
+   "position": {
+    "x": 0.0,
+    "y": 232.0
+   }
+  },
+  {
+   "uuid": "c2453299-c00c-5226-998e-17aa449a9b33",
+   "spec": "source.constant@1",
+   "label": "Marketing cost per new customer",
+   "inline": {},
+   "settings": {
+    "value": 15000,
+    "kind": "currency",
+    "unit": "USD/customer",
+    "source": "illustrative",
+    "notes": "Marketing spend needed to win one customer; sales team cost is separate."
+   },
+   "position": {
+    "x": 0.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "6663b4f0-cd95-5a21-90e4-ba1d1715aa46",
+   "spec": "source.series@1",
+   "label": "Quota-carrying sales reps",
+   "inline": {},
+   "settings": {
+    "values": [
+     6,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     21,
+     22,
+     22,
+     23,
+     23,
+     24,
+     24,
+     25,
+     25,
+     26,
+     26,
+     27,
+     27,
+     28,
+     28
+    ],
+    "kind": "count",
+    "unit": "FTE",
+    "source": "illustrative",
+    "notes": ""
+   },
+   "position": {
+    "x": 0.0,
+    "y": 928.0
+   }
+  },
+  {
+   "uuid": "401964eb-a1e7-5944-8de7-11041b274e20",
+   "spec": "source.constant@1",
+   "label": "Deals each rep can close per quarter",
+   "inline": {},
+   "settings": {
+    "value": 10,
+    "kind": "float",
+    "unit": null,
+    "source": "illustrative",
+    "notes": "Caps new customers when the sales team, not marketing, is the constraint."
+   },
+   "position": {
+    "x": 0.0,
+    "y": 464.0
+   }
+  },
+  {
+   "uuid": "eb602b26-20d4-5687-9e67-33924eb42268",
+   "spec": "source.constant@1",
+   "label": "Quarterly customer churn",
+   "inline": {},
+   "settings": {
+    "value": 0.04,
+    "kind": "percent",
+    "unit": null,
+    "source": "illustrative",
+    "notes": "Share of customers at the start of a quarter who cancel during it."
+   },
+   "position": {
+    "x": 0.0,
+    "y": 696.0
+   }
+  },
+  {
+   "uuid": "1c68097b-603f-5371-9fe2-40cd010418b7",
+   "spec": "source.constant@1",
+   "label": "Average revenue per account (monthly)",
+   "inline": {},
+   "settings": {
+    "value": 2000,
+    "kind": "currency",
+    "unit": "USD/customer",
+    "source": "illustrative",
+    "notes": "List price net of discounts, per customer per month, in period 1."
+   },
+   "position": {
+    "x": 1520.0,
+    "y": 490.0
+   }
+  },
+  {
+   "uuid": "c55f7492-da4f-5a21-84d7-27e9acd2b057",
+   "spec": "source.constant@1",
+   "label": "Annual price increase",
+   "inline": {},
+   "settings": {
+    "value": 0.03,
+    "kind": "percent",
+    "unit": null,
+    "source": "illustrative",
+    "notes": ""
+   },
+   "position": {
+    "x": 0.0,
+    "y": 1392.0
+   }
+  },
+  {
+   "uuid": "3fb7060b-a932-5754-9103-d6a158ba9340",
+   "spec": "source.constant@1",
+   "label": "Months per quarter",
+   "inline": {},
+   "settings": {
+    "value": 3,
+    "kind": "float",
+    "unit": null,
+    "source": "illustrative",
+    "notes": "Convention."
+   },
+   "position": {
+    "x": 4180.0,
+    "y": 284.0
+   }
+  },
+  {
+   "uuid": "95d2471d-4432-5a4f-b103-c45b669962e7",
+   "spec": "source.constant@1",
+   "label": "Months per year",
+   "inline": {},
+   "settings": {
+    "value": 12,
+    "kind": "float",
+    "unit": null,
+    "source": "illustrative",
+    "notes": "Convention."
+   },
+   "position": {
+    "x": 2660.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "e569f47e-f128-5a7c-93ff-d9b5e380c9b8",
+   "spec": "source.constant@1",
+   "label": "Hosting cost per customer (monthly)",
+   "inline": {},
+   "settings": {
+    "value": 140,
+    "kind": "currency",
+    "unit": "USD/customer",
+    "source": "illustrative",
+    "notes": "Cloud infrastructure and third-party services per customer per month."
+   },
+   "position": {
+    "x": 3800.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "1e70fd0c-90b4-5559-bba8-29d0616576d3",
+   "spec": "source.constant@1",
+   "label": "Customer support cost",
+   "inline": {},
+   "settings": {
+    "value": 0.06,
+    "kind": "percent",
+    "unit": null,
+    "source": "illustrative",
+    "notes": ""
+   },
+   "position": {
+    "x": 4560.0,
+    "y": 284.0
+   }
+  },
+  {
+   "uuid": "6b1768a1-f30a-5569-be1f-617156589e8d",
+   "spec": "source.constant@1",
+   "label": "Payment processing fees",
+   "inline": {},
+   "settings": {
+    "value": 0.025,
+    "kind": "percent",
+    "unit": null,
+    "source": "illustrative",
+    "notes": ""
+   },
+   "position": {
+    "x": 4560.0,
+    "y": 800.0
+   }
+  },
+  {
+   "uuid": "922dfc40-8016-5fbf-82ed-72305358a80b",
+   "spec": "source.constant@1",
+   "label": "Loaded cost per sales rep",
+   "inline": {},
+   "settings": {
+    "value": 45000,
+    "kind": "currency",
+    "unit": "USD/FTE",
+    "source": "illustrative",
+    "notes": "Salary, commission and benefits per quarter."
+   },
+   "position": {
+    "x": 0.0,
+    "y": 1160.0
+   }
+  },
+  {
+   "uuid": "8d495a82-9860-5773-bd43-2d6eba19108f",
+   "spec": "source.series@1",
+   "label": "Engineering headcount",
+   "inline": {},
+   "settings": {
+    "values": [
+     20,
+     21,
+     22,
+     24,
+     26,
+     28,
+     30,
+     32,
+     34,
+     36,
+     38,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45,
+     46,
+     47,
+     48,
+     49,
+     50,
+     51,
+     52,
+     53,
+     54,
+     55,
+     56,
+     57,
+     58,
+     59,
+     60
+    ],
+    "kind": "count",
+    "unit": "FTE",
+    "source": "illustrative",
+    "notes": ""
+   },
+   "position": {
+    "x": 0.0,
+    "y": 1624.0
+   }
+  },
+  {
+   "uuid": "f2b3f1f9-4a1b-5169-9d58-343a93f56ec5",
+   "spec": "source.constant@1",
+   "label": "Loaded cost per engineer",
+   "inline": {},
+   "settings": {
+    "value": 55000,
+    "kind": "currency",
+    "unit": "USD/FTE",
+    "source": "illustrative",
+    "notes": "Per quarter."
+   },
+   "position": {
+    "x": 0.0,
+    "y": 1856.0
+   }
+  },
+  {
+   "uuid": "a08c346f-02d3-5003-a7c6-1facd114f754",
+   "spec": "source.series@1",
+   "label": "G&A headcount",
+   "inline": {},
+   "settings": {
+    "values": [
+     6,
+     6,
+     6,
+     6,
+     8,
+     8,
+     8,
+     8,
+     10,
+     10,
+     10,
+     10,
+     12,
+     12,
+     12,
+     12,
+     14,
+     14,
+     14,
+     14,
+     15,
+     15,
+     15,
+     15,
+     16,
+     16,
+     16,
+     16,
+     17,
+     17,
+     17,
+     17
+    ],
+    "kind": "count",
+    "unit": "FTE",
+    "source": "illustrative",
+    "notes": "Finance, people, legal and operations."
+   },
+   "position": {
+    "x": 0.0,
+    "y": 2088.0
+   }
+  },
+  {
+   "uuid": "9e6ce471-486a-5642-b99a-7359e1a1c41e",
+   "spec": "source.constant@1",
+   "label": "Loaded cost per G&A employee",
+   "inline": {},
+   "settings": {
+    "value": 40000,
+    "kind": "currency",
+    "unit": "USD/FTE",
+    "source": "illustrative",
+    "notes": "Per quarter."
+   },
+   "position": {
+    "x": 0.0,
+    "y": 2320.0
+   }
+  },
+  {
+   "uuid": "1899e448-6585-5524-ae94-5426a6a05422",
+   "spec": "source.constant@1",
+   "label": "Other operating costs, period 1",
+   "inline": {},
+   "settings": {
+    "value": 600000,
+    "kind": "currency",
+    "unit": "USD",
+    "source": "illustrative",
+    "notes": "Rent, software and professional fees."
+   },
+   "position": {
+    "x": 0.0,
+    "y": 2552.0
+   }
+  },
+  {
+   "uuid": "8cd8ba2b-fa48-591d-8e28-ef7faaa5f695",
+   "spec": "source.constant@1",
+   "label": "Other operating cost growth per quarter",
+   "inline": {},
+   "settings": {
+    "value": 0.025,
+    "kind": "percent",
+    "unit": null,
+    "source": "illustrative",
+    "notes": ""
+   },
+   "position": {
+    "x": 0.0,
+    "y": 2784.0
+   }
+  },
+  {
+   "uuid": "d8f7e9d2-d971-5d30-8b91-b70b4bf2c95a",
+   "spec": "source.constant@1",
+   "label": "Platform rebuild (one-time)",
+   "inline": {},
+   "settings": {
+    "value": 6000000,
+    "kind": "currency",
+    "unit": "USD",
+    "source": "illustrative",
+    "notes": "A one-time re-architecture project, expensed as incurred."
+   },
+   "position": {
+    "x": 0.0,
+    "y": 3016.0
+   }
+  },
+  {
+   "uuid": "37735224-4026-55a1-8d7e-92023be18d20",
+   "spec": "source.constant@1",
+   "label": "Platform rebuild start period",
+   "inline": {},
+   "settings": {
+    "value": 9,
+    "kind": "int",
+    "unit": null,
+    "source": "illustrative",
+    "notes": ""
+   },
+   "position": {
+    "x": 0.0,
+    "y": 3248.0
+   }
+  },
+  {
+   "uuid": "952d24f9-47ab-59c7-b94d-fffd0d81c73d",
+   "spec": "source.constant@1",
+   "label": "Platform rebuild duration",
+   "inline": {},
+   "settings": {
+    "value": 4,
+    "kind": "int",
+    "unit": null,
+    "source": "illustrative",
+    "notes": ""
+   },
+   "position": {
+    "x": 0.0,
+    "y": 3480.0
+   }
+  },
+  {
+   "uuid": "60c7d167-2cbc-5f11-929d-8c7a01eac9df",
+   "spec": "source.series@1",
+   "label": "Growth capex",
+   "inline": {},
+   "settings": {
+    "values": [
+     400000,
+     400000,
+     400000,
+     400000,
+     250000,
+     250000,
+     250000,
+     250000,
+     900000,
+     900000,
+     900000,
+     900000,
+     300000,
+     300000,
+     300000,
+     300000,
+     300000,
+     300000,
+     300000,
+     300000,
+     300000,
+     300000,
+     300000,
+     300000,
+     300000,
+     300000,
+     300000,
+     300000,
+     300000,
+     300000,
+     300000,
+     300000
+    ],
+    "kind": "currency",
+    "unit": "USD",
+    "source": "illustrative",
+    "notes": "Office fit-outs and equipment for new hires."
+   },
+   "position": {
+    "x": 4940.0,
+    "y": 284.0
+   }
+  },
+  {
+   "uuid": "6a12badc-748e-56ca-8842-7ea030b9bdaf",
+   "spec": "source.constant@1",
+   "label": "Maintenance capex",
+   "inline": {},
+   "settings": {
+    "value": 0.015,
+    "kind": "percent",
+    "unit": null,
+    "source": "illustrative",
+    "notes": ""
+   },
+   "position": {
+    "x": 4560.0,
+    "y": 1032.0
+   }
+  },
+  {
+   "uuid": "aef30edc-8ad1-5a9d-8db3-04b23af7940d",
+   "spec": "source.constant@1",
+   "label": "Depreciable life",
+   "inline": {},
+   "settings": {
+    "value": 12,
+    "kind": "int",
+    "unit": null,
+    "source": "illustrative",
+    "notes": "Straight line, no salvage."
+   },
+   "position": {
+    "x": 5320.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "bc4a54ce-a6e4-52d5-b991-878abf0d0499",
+   "spec": "source.constant@1",
+   "label": "Receivable days",
+   "inline": {},
+   "settings": {
+    "value": 45,
+    "kind": "float",
+    "unit": null,
+    "source": "illustrative",
+    "notes": ""
+   },
+   "position": {
+    "x": 4560.0,
+    "y": 1264.0
+   }
+  },
+  {
+   "uuid": "f89cdb47-1b9c-5000-90c3-4c1b0d7b45ed",
+   "spec": "source.constant@1",
+   "label": "Payable days",
+   "inline": {},
+   "settings": {
+    "value": 30,
+    "kind": "float",
+    "unit": null,
+    "source": "illustrative",
+    "notes": ""
+   },
+   "position": {
+    "x": 5700.0,
+    "y": 284.0
+   }
+  },
+  {
+   "uuid": "74bd61b8-4954-5772-a52d-c0a7ec52bbbe",
+   "spec": "source.constant@1",
+   "label": "Days per quarter",
+   "inline": {},
+   "settings": {
+    "value": 91.25,
+    "kind": "float",
+    "unit": null,
+    "source": "illustrative",
+    "notes": "Convention."
+   },
+   "position": {
+    "x": 4940.0,
+    "y": 516.0
+   }
+  },
+  {
+   "uuid": "12d94186-aed3-5c86-8fea-eeec3c048c6c",
+   "spec": "source.constant@1",
+   "label": "Revenue billed annually in advance",
+   "inline": {},
+   "settings": {
+    "value": 0.4,
+    "kind": "percent",
+    "unit": null,
+    "source": "illustrative",
+    "notes": "Annual contracts billed up front create deferred revenue."
+   },
+   "position": {
+    "x": 4560.0,
+    "y": 1496.0
+   }
+  },
+  {
+   "uuid": "3a73b67c-df0d-53bf-a132-86815d9a7e8a",
+   "spec": "source.constant@1",
+   "label": "Average quarters of service prepaid",
+   "inline": {},
+   "settings": {
+    "value": 1.5,
+    "kind": "float",
+    "unit": null,
+    "source": "illustrative",
+    "notes": "Half of a year's billing, on average, is still unearned at quarter end."
+   },
+   "position": {
+    "x": 4940.0,
+    "y": 1032.0
+   }
+  },
+  {
+   "uuid": "6efe7783-1fe3-5fff-b563-5304f5068b24",
+   "spec": "source.constant@1",
+   "label": "Blended income tax rate",
+   "inline": {},
+   "settings": {
+    "value": 0.25,
+    "kind": "percent",
+    "unit": null,
+    "source": "illustrative",
+    "notes": "Losses carried forward without limit or expiry."
+   },
+   "position": {
+    "x": 8360.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "1bdaf9ab-a8f9-514f-a784-7d97349fa13d",
+   "spec": "source.constant@1",
+   "label": "Opening cash, start of period 1",
+   "inline": {},
+   "settings": {
+    "value": 25000000,
+    "kind": "currency",
+    "unit": "USD",
+    "source": "illustrative",
+    "notes": ""
+   },
+   "position": {
+    "x": 10260.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "af1a5f3b-707f-5212-865c-91f710760c76",
+   "spec": "source.series@1",
+   "label": "Equity raised",
+   "inline": {},
+   "settings": {
+    "values": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     30000000.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     40000000.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "kind": "currency",
+    "unit": "USD",
+    "source": "illustrative",
+    "notes": "Scheduled raises; no cash-triggered financing (that would be circular)."
+   },
+   "position": {
+    "x": 9880.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "5068307e-e459-5669-b39f-30656a7005a5",
+   "spec": "source.constant@1",
+   "label": "Minimum cash balance",
+   "inline": {},
+   "settings": {
+    "value": 8000000,
+    "kind": "currency",
+    "unit": "USD",
+    "source": "illustrative",
+    "notes": "Used only for the cash check flag."
+   },
+   "position": {
+    "x": 10640.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "60aa941e-6649-567f-82dd-3e434a83d0bb",
+   "spec": "source.constant@1",
+   "label": "Discount rate (annual)",
+   "inline": {},
+   "settings": {
+    "value": 0.18,
+    "kind": "percent",
+    "unit": null,
+    "source": "illustrative",
+    "notes": "Growth-stage rate on unlevered FCF."
+   },
+   "position": {
+    "x": 0.0,
+    "y": 3712.0
+   }
+  },
+  {
+   "uuid": "5a8d7aa4-e905-59d9-8c64-928c2d084dbe",
+   "spec": "source.constant@1",
+   "label": "Terminal growth (annual)",
+   "inline": {},
+   "settings": {
+    "value": 0.03,
+    "kind": "percent",
+    "unit": null,
+    "source": "illustrative",
+    "notes": ""
+   },
+   "position": {
+    "x": 0.0,
+    "y": 3944.0
+   }
+  },
+  {
+   "uuid": "7775a415-254c-5c2e-bce9-178cd784b64b",
+   "spec": "source.constant@1",
+   "label": "IRR solver starting guess (quarterly)",
+   "inline": {},
+   "settings": {
+    "value": 0.05,
+    "kind": "percent",
+    "unit": null,
+    "source": "illustrative",
+    "notes": "Only chooses between roots; does not change a unique answer."
+   },
+   "position": {
+    "x": 12160.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "ae3e9dbb-23ad-56ce-81f2-5cb087728abe",
+   "spec": "source.constant@1",
+   "label": "Terminal period",
+   "inline": {},
+   "settings": {
+    "value": 32,
+    "kind": "int",
+    "unit": null,
+    "source": "illustrative",
+    "notes": "Equals the number of periods."
+   },
+   "position": {
+    "x": 0.0,
+    "y": 4176.0
+   }
+  },
+  {
+   "uuid": "1b709ffe-951f-5162-a43d-eb333831b80f",
+   "spec": "math.divide@1",
+   "label": null,
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 380.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "3326b2c4-298b-5106-b24c-884fa8337602",
+   "spec": "math.round@1",
+   "label": "New customers marketing can win",
+   "inline": {
+    "digits": 0
+   },
+   "settings": {
+    "display_kind": "count",
+    "display_unit": "customers"
+   },
+   "position": {
+    "x": 760.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "583c6f1f-b94a-5a60-aa5c-22ccfd3b7d68",
+   "spec": "math.multiply@1",
+   "label": "New customers the sales team can close",
+   "inline": {},
+   "settings": {
+    "display_kind": "quantity",
+    "display_unit": "customers"
+   },
+   "position": {
+    "x": 380.0,
+    "y": 284.0
+   }
+  },
+  {
+   "uuid": "95409f26-1442-56f2-ab8e-1c67d3b271be",
+   "spec": "math.min@1",
+   "label": "New customers",
+   "inline": {},
+   "settings": {
+    "display_kind": "quantity",
+    "display_unit": "customers"
+   },
+   "position": {
+    "x": 1140.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "b533b737-1e11-5f7c-94a6-7e3a2c1a1330",
+   "spec": "math.subtract@1",
+   "label": null,
+   "inline": {
+    "a": 1
+   },
+   "settings": {},
+   "position": {
+    "x": 380.0,
+    "y": 568.0
+   }
+  },
+  {
+   "uuid": "b3620901-710f-5a4f-a39d-d2338edccdcf",
+   "spec": "math.subtract@1",
+   "label": null,
+   "inline": {
+    "a": 0
+   },
+   "settings": {},
+   "position": {
+    "x": 380.0,
+    "y": 852.0
+   }
+  },
+  {
+   "uuid": "3f6dccd8-48d5-5c7e-b62e-5ccb0317a88e",
+   "spec": "source.growth@1",
+   "label": "Share of a period-1 customer still active",
+   "inline": {},
+   "settings": {
+    "display_kind": "float"
+   },
+   "position": {
+    "x": 760.0,
+    "y": 568.0
+   }
+  },
+  {
+   "uuid": "5bdc19ce-4689-540c-ac55-c39952c001e9",
+   "spec": "math.divide@1",
+   "label": "New customers scaled by retention",
+   "inline": {},
+   "settings": {
+    "display_kind": "quantity",
+    "display_unit": "customers"
+   },
+   "position": {
+    "x": 1520.0,
+    "y": 1290.0
+   }
+  },
+  {
+   "uuid": "5d94342e-6a70-559a-9a15-6918e03fbd0c",
+   "spec": "series.accumulate@1",
+   "label": null,
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 1900.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "ec9daa88-720c-5fe3-8faf-a78c12657a69",
+   "spec": "math.multiply@1",
+   "label": "Customers at end of quarter",
+   "inline": {},
+   "settings": {
+    "display_kind": "quantity",
+    "display_unit": "customers"
+   },
+   "position": {
+    "x": 2280.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "e4ac7aa3-5e70-5d5e-8e43-50b0ac5f6bb2",
+   "spec": "source.flag@1",
+   "label": null,
+   "inline": {
+    "start": 1,
+    "end": 1
+   },
+   "settings": {},
+   "position": {
+    "x": 2660.0,
+    "y": 516.0
+   }
+  },
+  {
+   "uuid": "7e02db1e-e96b-5f0a-b6f4-e5f431d8601c",
+   "spec": "series.lag@1",
+   "label": null,
+   "inline": {
+    "n": 1
+   },
+   "settings": {},
+   "position": {
+    "x": 2660.0,
+    "y": 232.0
+   }
+  },
+  {
+   "uuid": "cfc768a8-b94a-59fe-b26a-fec8a91340fe",
+   "spec": "logic.if@1",
+   "label": "Customers at start of quarter",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 3040.0,
+    "y": 284.0
+   }
+  },
+  {
+   "uuid": "31559bf6-710c-59c5-9488-6fb6021eb0e3",
+   "spec": "math.multiply@1",
+   "label": "Customers lost",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 3420.0,
+    "y": 568.0
+   }
+  },
+  {
+   "uuid": "a4697a0c-08e9-5f8b-864b-fcc226b1479a",
+   "spec": "math.subtract@1",
+   "label": "Net new customers",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 3800.0,
+    "y": 516.0
+   }
+  },
+  {
+   "uuid": "7b288782-4686-53f4-a2aa-ef1078d9e402",
+   "spec": "math.add@1",
+   "label": null,
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 3420.0,
+    "y": 284.0
+   }
+  },
+  {
+   "uuid": "82424263-419b-56fa-bd55-b4007ce98ac6",
+   "spec": "math.divide@1",
+   "label": "Average customers",
+   "inline": {
+    "b": 2
+   },
+   "settings": {},
+   "position": {
+    "x": 3800.0,
+    "y": 800.0
+   }
+  },
+  {
+   "uuid": "1d0d1f33-a8b1-5826-bde6-c9b8dccac4fe",
+   "spec": "math.add@1",
+   "label": null,
+   "inline": {
+    "a": 1
+   },
+   "settings": {},
+   "position": {
+    "x": 380.0,
+    "y": 1704.0
+   }
+  },
+  {
+   "uuid": "4f1cdd23-4106-5460-8efc-ed0318b2b25f",
+   "spec": "math.power@1",
+   "label": null,
+   "inline": {
+    "b": 0.25
+   },
+   "settings": {},
+   "position": {
+    "x": 760.0,
+    "y": 852.0
+   }
+  },
+  {
+   "uuid": "ebbcf02e-aad1-52de-b30d-58173f275886",
+   "spec": "math.subtract@1",
+   "label": "Price increase per quarter",
+   "inline": {
+    "b": 1
+   },
+   "settings": {
+    "display_kind": "percent"
+   },
+   "position": {
+    "x": 1140.0,
+    "y": 284.0
+   }
+  },
+  {
+   "uuid": "155bf9ab-542a-51cb-87c0-2b264132a849",
+   "spec": "source.growth@1",
+   "label": "Price index",
+   "inline": {
+    "start": 1
+   },
+   "settings": {},
+   "position": {
+    "x": 1520.0,
+    "y": 1574.0
+   }
+  },
+  {
+   "uuid": "c055044e-8934-57d5-832d-4069ffc38f3b",
+   "spec": "math.multiply@1",
+   "label": "Average revenue per account (monthly, current price)",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 1900.0,
+    "y": 284.0
+   }
+  },
+  {
+   "uuid": "5d057561-a5b9-5788-8542-299ca24183fc",
+   "spec": "math.multiply@1",
+   "label": "Monthly recurring revenue (end of quarter)",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 2660.0,
+    "y": 800.0
+   }
+  },
+  {
+   "uuid": "c3e8006e-5078-5543-834a-d6b243c35b4d",
+   "spec": "math.multiply@1",
+   "label": "Annual recurring revenue",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 3040.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "8547a2fa-f6c2-5584-acc1-b55b1781006b",
+   "spec": "math.multiply@1",
+   "label": null,
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 4180.0,
+    "y": 516.0
+   }
+  },
+  {
+   "uuid": "1b4ed93f-1100-547a-a6fe-edebe1175b5a",
+   "spec": "math.multiply@1",
+   "label": "Revenue",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 4560.0,
+    "y": 516.0
+   }
+  },
+  {
+   "uuid": "d00f2b47-d220-571f-bf38-4e2abb7ba36b",
+   "spec": "math.multiply@1",
+   "label": null,
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 4180.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "bd5ee939-821c-576a-9125-4303d211c2a0",
+   "spec": "math.multiply@1",
+   "label": "Cost of revenue: hosting",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 4560.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "5ae6acc1-50db-5557-bbf7-1fc7eae8a59c",
+   "spec": "math.multiply@1",
+   "label": "Cost of revenue: support",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 4940.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "ff37017d-14e9-5609-8a7d-90ba79148fe5",
+   "spec": "math.multiply@1",
+   "label": "Cost of revenue: payment fees",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 4940.0,
+    "y": 748.0
+   }
+  },
+  {
+   "uuid": "4139612f-7331-5edf-b493-bc5b7740dda7",
+   "spec": "math.sum@1",
+   "label": "Cost of revenue",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 5320.0,
+    "y": 232.0
+   }
+  },
+  {
+   "uuid": "2bdd4424-c6dd-5f57-9b70-10dd1659b3e8",
+   "spec": "math.subtract@1",
+   "label": "Gross profit",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 5700.0,
+    "y": 516.0
+   }
+  },
+  {
+   "uuid": "ff4771d7-cd18-523d-a691-d047df415d0c",
+   "spec": "math.divide@1",
+   "label": "Gross margin",
+   "inline": {},
+   "settings": {
+    "display_kind": "percent"
+   },
+   "position": {
+    "x": 6080.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "4c661f1d-c74d-5881-8342-8876ed1c5988",
+   "spec": "math.multiply@1",
+   "label": "Sales team cost",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 380.0,
+    "y": 1136.0
+   }
+  },
+  {
+   "uuid": "0d0b0130-4e0c-5ddc-88e9-d041d9efcebb",
+   "spec": "math.add@1",
+   "label": "Sales and marketing",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 760.0,
+    "y": 284.0
+   }
+  },
+  {
+   "uuid": "610acff2-5990-5bac-9386-358358af9afa",
+   "spec": "math.multiply@1",
+   "label": "Research and development",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 380.0,
+    "y": 2324.0
+   }
+  },
+  {
+   "uuid": "d48c4bbf-0f0b-50a6-9bce-c34ef8dd5af4",
+   "spec": "source.growth@1",
+   "label": "Other operating costs",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 380.0,
+    "y": 2892.0
+   }
+  },
+  {
+   "uuid": "7d3f560a-373c-5d61-851a-9724cc11e8a6",
+   "spec": "math.multiply@1",
+   "label": null,
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 380.0,
+    "y": 2608.0
+   }
+  },
+  {
+   "uuid": "97e20e39-70bc-5cdd-b176-310236aa4ea0",
+   "spec": "math.add@1",
+   "label": "General and administrative",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 760.0,
+    "y": 1136.0
+   }
+  },
+  {
+   "uuid": "4f435902-ad30-5c57-9b47-cc5a43f1e9d1",
+   "spec": "source.spread@1",
+   "label": "Platform rebuild",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 380.0,
+    "y": 3176.0
+   }
+  },
+  {
+   "uuid": "0c14674e-210e-58b3-a697-bf0dbcb8c380",
+   "spec": "math.sum@1",
+   "label": "Operating expenses",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 1140.0,
+    "y": 852.0
+   }
+  },
+  {
+   "uuid": "d95c62e9-5647-520a-94f3-0be651344fae",
+   "spec": "math.subtract@1",
+   "label": "EBITDA",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 6080.0,
+    "y": 284.0
+   }
+  },
+  {
+   "uuid": "8857a4aa-f5a6-5613-a8a2-63dc6413d4af",
+   "spec": "math.divide@1",
+   "label": "EBITDA margin",
+   "inline": {},
+   "settings": {
+    "display_kind": "percent"
+   },
+   "position": {
+    "x": 6460.0,
+    "y": 1110.0
+   }
+  },
+  {
+   "uuid": "7bd6b33d-6e14-5548-b03a-67d17f316b58",
+   "spec": "math.multiply@1",
+   "label": "Maintenance capex",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 4940.0,
+    "y": 2374.0
+   }
+  },
+  {
+   "uuid": "85919ec4-fbdf-5a81-8568-00d926f14acd",
+   "spec": "math.add@1",
+   "label": "Capex",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 5320.0,
+    "y": 852.0
+   }
+  },
+  {
+   "uuid": "11e5ce74-9ae9-5649-a376-0bc50504ccc4",
+   "spec": "finance.depreciation_sl@1",
+   "label": "Depreciation",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 5700.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "a09b6b36-becc-5a2a-a78d-83ac02168a5e",
+   "spec": "math.subtract@1",
+   "label": "EBIT",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 6460.0,
+    "y": 284.0
+   }
+  },
+  {
+   "uuid": "a5b10eb3-1878-5725-b2b3-456900550504",
+   "spec": "series.accumulate@1",
+   "label": "Cumulative EBIT",
+   "inline": {
+    "opening": 0
+   },
+   "settings": {},
+   "position": {
+    "x": 6840.0,
+    "y": 284.0
+   }
+  },
+  {
+   "uuid": "c5e00f67-8ace-5c15-9be0-5a4435ce4885",
+   "spec": "series.running_max@1",
+   "label": null,
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 7220.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "18c2cffe-58d1-5ffc-b9d6-9f58e724b981",
+   "spec": "math.max@1",
+   "label": "Cumulative taxable income after losses",
+   "inline": {
+    "a": 0
+   },
+   "settings": {},
+   "position": {
+    "x": 7600.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "58718950-a6b8-525b-9ba7-07b8034a944c",
+   "spec": "series.lag@1",
+   "label": null,
+   "inline": {
+    "n": 1
+   },
+   "settings": {},
+   "position": {
+    "x": 7980.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "2bdd8874-2000-5787-89a9-46d17b247dcf",
+   "spec": "math.subtract@1",
+   "label": "Taxable income",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 8360.0,
+    "y": 232.0
+   }
+  },
+  {
+   "uuid": "3413f783-213c-5cd5-8f06-3dbe01e718a3",
+   "spec": "math.multiply@1",
+   "label": "Income tax",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 8740.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "ac7f526e-c5fe-5362-bb07-2aa126d4b32f",
+   "spec": "math.subtract@1",
+   "label": "Net income",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 9120.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "e4dc3221-d517-5f85-841d-c18dc08bbc57",
+   "spec": "math.multiply@1",
+   "label": null,
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 4940.0,
+    "y": 2658.0
+   }
+  },
+  {
+   "uuid": "d432f502-3ef3-5fea-b507-82a872b9e018",
+   "spec": "math.divide@1",
+   "label": "Accounts receivable",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 5320.0,
+    "y": 1136.0
+   }
+  },
+  {
+   "uuid": "2f5f9ab8-8374-531e-9733-329a1a590849",
+   "spec": "math.multiply@1",
+   "label": null,
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 4940.0,
+    "y": 2942.0
+   }
+  },
+  {
+   "uuid": "34b8f0b7-144a-50e6-92be-6c65958a11ea",
+   "spec": "math.multiply@1",
+   "label": "Deferred revenue",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 5320.0,
+    "y": 1420.0
+   }
+  },
+  {
+   "uuid": "cde7be23-d7c6-5377-bc0b-86c60c1ed241",
+   "spec": "math.add@1",
+   "label": null,
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 5700.0,
+    "y": 1394.0
+   }
+  },
+  {
+   "uuid": "1fc66d0f-911b-5037-80e3-24bbb4217260",
+   "spec": "math.multiply@1",
+   "label": null,
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 6080.0,
+    "y": 568.0
+   }
+  },
+  {
+   "uuid": "f2a84bec-3f89-5de3-95d5-66269c2d5b61",
+   "spec": "math.divide@1",
+   "label": "Accounts payable",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 6460.0,
+    "y": 826.0
+   }
+  },
+  {
+   "uuid": "bd063655-62b8-53b0-9e05-21fcedf8aec9",
+   "spec": "math.subtract@1",
+   "label": null,
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 5700.0,
+    "y": 1110.0
+   }
+  },
+  {
+   "uuid": "f539161d-b240-55f6-88e5-54d31fede1f2",
+   "spec": "math.subtract@1",
+   "label": "Net working capital",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 6840.0,
+    "y": 878.0
+   }
+  },
+  {
+   "uuid": "a88d87e7-9dd2-5fd4-9e27-dceda6d5c432",
+   "spec": "series.lag@1",
+   "label": null,
+   "inline": {
+    "n": 1
+   },
+   "settings": {},
+   "position": {
+    "x": 7220.0,
+    "y": 542.0
+   }
+  },
+  {
+   "uuid": "e96c68ae-41cc-550c-99e7-5bfba42fff72",
+   "spec": "math.subtract@1",
+   "label": "Change in net working capital",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 7600.0,
+    "y": 594.0
+   }
+  },
+  {
+   "uuid": "1b0024d9-2f93-58f8-b0e0-f22d7b2b6f22",
+   "spec": "math.subtract@1",
+   "label": null,
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 9120.0,
+    "y": 284.0
+   }
+  },
+  {
+   "uuid": "092bb52a-439a-5379-8737-e047a4bc482b",
+   "spec": "math.subtract@1",
+   "label": null,
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 9500.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "1577dffe-82ad-54c7-bb7a-fad074fbb662",
+   "spec": "math.subtract@1",
+   "label": "Free cash flow (unlevered)",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 9880.0,
+    "y": 232.0
+   }
+  },
+  {
+   "uuid": "89bdd08a-60e3-55b9-b4f0-e11c6546e499",
+   "spec": "series.accumulate@1",
+   "label": "Cumulative free cash flow",
+   "inline": {
+    "opening": 0
+   },
+   "settings": {},
+   "position": {
+    "x": 10260.0,
+    "y": 516.0
+   }
+  },
+  {
+   "uuid": "f753efb4-ed9d-53ca-9023-4ba740d265fa",
+   "spec": "math.add@1",
+   "label": "Net cash flow",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 10260.0,
+    "y": 232.0
+   }
+  },
+  {
+   "uuid": "de8a5486-8b54-5c23-afe8-6f1d9dcabd0f",
+   "spec": "series.accumulate@1",
+   "label": "Cash balance",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 10640.0,
+    "y": 232.0
+   }
+  },
+  {
+   "uuid": "517df049-f675-5357-b70d-6f48549bc01b",
+   "spec": "logic.compare@1",
+   "label": "Cash above minimum",
+   "inline": {},
+   "settings": {
+    "op": ">="
+   },
+   "position": {
+    "x": 11020.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "92761999-163d-5673-a32b-13ba015cbe58",
+   "spec": "math.subtract@1",
+   "label": null,
+   "inline": {
+    "a": 0
+   },
+   "settings": {},
+   "position": {
+    "x": 10260.0,
+    "y": 800.0
+   }
+  },
+  {
+   "uuid": "cbd00925-78d5-5d74-b2ba-f6cf8ba355c1",
+   "spec": "math.max@1",
+   "label": "Cash burn",
+   "inline": {
+    "a": 0
+   },
+   "settings": {},
+   "position": {
+    "x": 10640.0,
+    "y": 516.0
+   }
+  },
+  {
+   "uuid": "04e8c1aa-eab9-559b-b1b8-8b55b3f9ecea",
+   "spec": "math.safe_divide@1",
+   "label": "Runway at current burn",
+   "inline": {
+    "fallback": 0
+   },
+   "settings": {},
+   "position": {
+    "x": 11020.0,
+    "y": 284.0
+   }
+  },
+  {
+   "uuid": "44fcfb05-1836-5a76-a585-795df5ebaab5",
+   "spec": "math.safe_divide@1",
+   "label": "Customer acquisition cost (fully loaded)",
+   "inline": {
+    "fallback": 0
+   },
+   "settings": {
+    "display_unit": "USD/customer"
+   },
+   "position": {
+    "x": 1520.0,
+    "y": 980.0
+   }
+  },
+  {
+   "uuid": "d9f886f6-f47d-5363-a72e-d55fba8a01f4",
+   "spec": "math.multiply@1",
+   "label": "Gross profit per customer per month",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 6460.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "188924e3-f666-5115-9e1b-90ceddd4ccd2",
+   "spec": "math.divide@1",
+   "label": "Expected customer lifetime",
+   "inline": {
+    "a": 1
+   },
+   "settings": {},
+   "position": {
+    "x": 380.0,
+    "y": 1420.0
+   }
+  },
+  {
+   "uuid": "c9fafb4c-a145-5972-9b81-e8a8e1cf73fa",
+   "spec": "math.multiply@1",
+   "label": null,
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 6840.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "2c814a3f-2645-5a9b-8d68-a860dfff864d",
+   "spec": "math.multiply@1",
+   "label": "Customer lifetime value",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 7220.0,
+    "y": 258.0
+   }
+  },
+  {
+   "uuid": "0dacba46-fb07-5499-aa62-63ccade2e65a",
+   "spec": "math.safe_divide@1",
+   "label": "Lifetime value to CAC",
+   "inline": {
+    "fallback": 0
+   },
+   "settings": {},
+   "position": {
+    "x": 7600.0,
+    "y": 284.0
+   }
+  },
+  {
+   "uuid": "815a2f5b-bc8a-5a41-b02f-0219e82d212d",
+   "spec": "math.safe_divide@1",
+   "label": "CAC payback",
+   "inline": {
+    "fallback": 0
+   },
+   "settings": {},
+   "position": {
+    "x": 6840.0,
+    "y": 568.0
+   }
+  },
+  {
+   "uuid": "06921fdf-5f31-50b3-ae8c-d0db2294ebd0",
+   "spec": "series.lag@1",
+   "label": null,
+   "inline": {
+    "n": 4
+   },
+   "settings": {},
+   "position": {
+    "x": 4940.0,
+    "y": 1264.0
+   }
+  },
+  {
+   "uuid": "6713daec-a9a1-5310-87c4-3838f159dabd",
+   "spec": "math.subtract@1",
+   "label": null,
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 5320.0,
+    "y": 568.0
+   }
+  },
+  {
+   "uuid": "0e9b9823-c923-5cec-9770-206be522de35",
+   "spec": "series.lag@1",
+   "label": null,
+   "inline": {
+    "n": 4
+   },
+   "settings": {},
+   "position": {
+    "x": 4940.0,
+    "y": 1548.0
+   }
+  },
+  {
+   "uuid": "ad4a0bf9-db5d-53c5-8bae-81a436f11d7d",
+   "spec": "math.safe_divide@1",
+   "label": "Revenue growth, year over year",
+   "inline": {
+    "fallback": 0
+   },
+   "settings": {
+    "display_kind": "percent"
+   },
+   "position": {
+    "x": 5700.0,
+    "y": 800.0
+   }
+  },
+  {
+   "uuid": "d4fb3bd0-9920-5a3a-9887-515491ddfd5e",
+   "spec": "math.add@1",
+   "label": "Rule of 40 score",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 6840.0,
+    "y": 1162.0
+   }
+  },
+  {
+   "uuid": "fd2f197a-feea-5283-952a-3b283fab77c9",
+   "spec": "logic.compare@1",
+   "label": "Rule of 40 met",
+   "inline": {
+    "b": 0.4
+   },
+   "settings": {
+    "op": ">="
+   },
+   "position": {
+    "x": 7220.0,
+    "y": 826.0
+   }
+  },
+  {
+   "uuid": "e4e9dc35-8d3f-5b40-8f43-9643d212ec2e",
+   "spec": "series.lag@1",
+   "label": null,
+   "inline": {
+    "n": 1
+   },
+   "settings": {},
+   "position": {
+    "x": 3420.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "d99a582e-3cac-5157-a183-1fa3639e5fbb",
+   "spec": "math.subtract@1",
+   "label": "Net new ARR",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 3800.0,
+    "y": 232.0
+   }
+  },
+  {
+   "uuid": "eadbea98-622c-5ef6-852c-e82c6fbff2a0",
+   "spec": "math.safe_divide@1",
+   "label": "Burn multiple",
+   "inline": {
+    "fallback": 0
+   },
+   "settings": {},
+   "position": {
+    "x": 11020.0,
+    "y": 594.0
+   }
+  },
+  {
+   "uuid": "9e9ff088-d2ea-52b5-81fb-4d14f2bda254",
+   "spec": "math.sum@1",
+   "label": "Headcount",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 380.0,
+    "y": 1988.0
+   }
+  },
+  {
+   "uuid": "49a01e0c-0885-5382-9083-17a2957b1590",
+   "spec": "math.multiply@1",
+   "label": null,
+   "inline": {
+    "b": 4
+   },
+   "settings": {},
+   "position": {
+    "x": 4940.0,
+    "y": 1832.0
+   }
+  },
+  {
+   "uuid": "9e076622-fb08-5172-9e5b-887f133c3cca",
+   "spec": "math.divide@1",
+   "label": "Annualized revenue per employee",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 5320.0,
+    "y": 1704.0
+   }
+  },
+  {
+   "uuid": "7ef35bae-eefd-57ba-ab76-c00258357eb0",
+   "spec": "series.total@1",
+   "label": "Customers won, total",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 1520.0,
+    "y": 232.0
+   }
+  },
+  {
+   "uuid": "1ea6fc48-920d-5589-9c2f-3602a99e504d",
+   "spec": "math.add@1",
+   "label": null,
+   "inline": {
+    "a": 1
+   },
+   "settings": {},
+   "position": {
+    "x": 380.0,
+    "y": 3486.0
+   }
+  },
+  {
+   "uuid": "9849eb09-bbc1-565f-a321-15762d7d902f",
+   "spec": "math.power@1",
+   "label": null,
+   "inline": {
+    "b": 0.25
+   },
+   "settings": {},
+   "position": {
+    "x": 760.0,
+    "y": 1420.0
+   }
+  },
+  {
+   "uuid": "c5bcb25f-7d15-5ebb-bb92-14c20423238e",
+   "spec": "math.subtract@1",
+   "label": "Discount rate (quarterly)",
+   "inline": {
+    "b": 1
+   },
+   "settings": {
+    "display_kind": "percent"
+   },
+   "position": {
+    "x": 1140.0,
+    "y": 568.0
+   }
+  },
+  {
+   "uuid": "66ac0182-e2fe-5f37-ab50-c2957df67c9e",
+   "spec": "math.add@1",
+   "label": null,
+   "inline": {
+    "a": 1
+   },
+   "settings": {},
+   "position": {
+    "x": 380.0,
+    "y": 3770.0
+   }
+  },
+  {
+   "uuid": "32eec3a9-ac42-5570-8ed6-ba3e32067f72",
+   "spec": "math.power@1",
+   "label": null,
+   "inline": {
+    "b": 0.25
+   },
+   "settings": {},
+   "position": {
+    "x": 760.0,
+    "y": 1704.0
+   }
+  },
+  {
+   "uuid": "20c77a42-7a5f-5d23-b3a5-bfbb80382892",
+   "spec": "math.subtract@1",
+   "label": "Terminal growth (quarterly)",
+   "inline": {
+    "b": 1
+   },
+   "settings": {
+    "display_kind": "percent"
+   },
+   "position": {
+    "x": 1140.0,
+    "y": 1214.0
+   }
+  },
+  {
+   "uuid": "f0c100ce-104d-5dcb-93fe-a2da1760987d",
+   "spec": "source.flag@1",
+   "label": "Terminal period flag",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 380.0,
+    "y": 4054.0
+   }
+  },
+  {
+   "uuid": "432e63c6-e96f-5350-8fee-932c26bc7100",
+   "spec": "logic.if@1",
+   "label": "FCF in terminal period",
+   "inline": {
+    "else": 0
+   },
+   "settings": {},
+   "position": {
+    "x": 10260.0,
+    "y": 1342.0
+   }
+  },
+  {
+   "uuid": "c6a93005-663d-53f4-9328-7b26e9f29fe3",
+   "spec": "series.total@1",
+   "label": "Terminal-period FCF",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 10640.0,
+    "y": 800.0
+   }
+  },
+  {
+   "uuid": "37da0070-1a64-542f-bfac-32b22241ab3b",
+   "spec": "math.add@1",
+   "label": null,
+   "inline": {
+    "a": 1
+   },
+   "settings": {},
+   "position": {
+    "x": 1520.0,
+    "y": 2400.0
+   }
+  },
+  {
+   "uuid": "12167778-b288-5f00-b800-db7df429fabc",
+   "spec": "math.multiply@1",
+   "label": null,
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 11020.0,
+    "y": 904.0
+   }
+  },
+  {
+   "uuid": "4714ce35-6c37-5226-9726-988e59c383b5",
+   "spec": "math.subtract@1",
+   "label": null,
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 1520.0,
+    "y": 2116.0
+   }
+  },
+  {
+   "uuid": "2821cef7-a6d2-5414-8839-db2444e1016f",
+   "spec": "math.divide@1",
+   "label": "Terminal value (Gordon growth)",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 11400.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "09ebb7d4-2474-5920-bce5-ef082fad8bba",
+   "spec": "logic.if@1",
+   "label": "Terminal value in cash flow",
+   "inline": {
+    "else": 0
+   },
+   "settings": {},
+   "position": {
+    "x": 11780.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "ac40a10b-e2aa-560a-b7ed-cb5e92c0fdbe",
+   "spec": "math.add@1",
+   "label": "Valuation cash flow (FCF plus TV)",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 12160.0,
+    "y": 232.0
+   }
+  },
+  {
+   "uuid": "c81302bc-2eb8-50e4-8642-48a518241dff",
+   "spec": "finance.npv@1",
+   "label": "NPV",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 12540.0,
+    "y": 284.0
+   }
+  },
+  {
+   "uuid": "226d121d-cefd-5d2d-95d5-b67703c7d9ac",
+   "spec": "finance.discount_factor@1",
+   "label": "Discount factor",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 1520.0,
+    "y": 1858.0
+   }
+  },
+  {
+   "uuid": "c18dc349-8ad6-5c0a-bbfe-bc7b9159859f",
+   "spec": "math.multiply@1",
+   "label": "PV of valuation cash flow",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 12540.0,
+    "y": 568.0
+   }
+  },
+  {
+   "uuid": "85ff1a21-47eb-5c7f-a372-d8c792026a0f",
+   "spec": "series.total@1",
+   "label": "NPV via discount factors",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 12920.0,
+    "y": 284.0
+   }
+  },
+  {
+   "uuid": "ecbcacbd-1eb4-5188-a4ac-42d65f39be3e",
+   "spec": "finance.irr@1",
+   "label": "IRR (quarterly)",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 12540.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "678b0f54-e0a7-5e57-ac2a-bee13cf72041",
+   "spec": "math.add@1",
+   "label": null,
+   "inline": {
+    "a": 1
+   },
+   "settings": {},
+   "position": {
+    "x": 12920.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "5d8ceddf-cb70-518b-898d-f1dc61d1eab1",
+   "spec": "math.power@1",
+   "label": null,
+   "inline": {
+    "b": 4
+   },
+   "settings": {},
+   "position": {
+    "x": 13300.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "6f792ce3-efa9-542a-b231-a374bba87e6f",
+   "spec": "math.subtract@1",
+   "label": "IRR (annualized)",
+   "inline": {
+    "b": 1
+   },
+   "settings": {
+    "display_kind": "percent"
+   },
+   "position": {
+    "x": 13680.0,
+    "y": 0.0
+   }
+  },
+  {
+   "uuid": "62e421d1-5120-5dbe-b922-61523071cf06",
+   "spec": "series.annual@1",
+   "label": "Revenue",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 4940.0,
+    "y": 2116.0
+   }
+  },
+  {
+   "uuid": "32c92b70-2881-506b-a90b-b4c4b839a58c",
+   "spec": "series.annual@1",
+   "label": "EBITDA",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 6460.0,
+    "y": 568.0
+   }
+  },
+  {
+   "uuid": "69881af9-c41c-5e52-9991-106c0263f100",
+   "spec": "series.annual@1",
+   "label": "Free cash flow",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 10260.0,
+    "y": 1084.0
+   }
+  },
+  {
+   "uuid": "21948b89-ee0b-59a8-8ac7-08ef20d6d8be",
+   "spec": "series.annual@1",
+   "label": "New customers",
+   "inline": {},
+   "settings": {},
+   "position": {
+    "x": 1520.0,
+    "y": 722.0
+   }
+  }
+ ],
+ "wires": [
+  {
+   "uuid": "a72414ab-354a-5b05-9bea-b13115ff1af6",
+   "from": {
+    "block": "140e8edd-5f1a-53a8-9ab5-e8a9f8f97f7b",
+    "port": "value"
+   },
+   "to": {
+    "block": "1b709ffe-951f-5162-a43d-eb333831b80f",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "24f6d96f-40be-52c0-9f80-af2d5cd838c9",
+   "from": {
+    "block": "c2453299-c00c-5226-998e-17aa449a9b33",
+    "port": "value"
+   },
+   "to": {
+    "block": "1b709ffe-951f-5162-a43d-eb333831b80f",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "19d4858a-08b6-52dc-ba14-92bd6ba23c42",
+   "from": {
+    "block": "1b709ffe-951f-5162-a43d-eb333831b80f",
+    "port": "result"
+   },
+   "to": {
+    "block": "3326b2c4-298b-5106-b24c-884fa8337602",
+    "port": "x"
+   }
+  },
+  {
+   "uuid": "a63bdba0-0015-57d9-be7b-007a53de304b",
+   "from": {
+    "block": "6663b4f0-cd95-5a21-90e4-ba1d1715aa46",
+    "port": "value"
+   },
+   "to": {
+    "block": "583c6f1f-b94a-5a60-aa5c-22ccfd3b7d68",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "b9fe64e6-d33e-5bed-8581-966f92962e60",
+   "from": {
+    "block": "401964eb-a1e7-5944-8de7-11041b274e20",
+    "port": "value"
+   },
+   "to": {
+    "block": "583c6f1f-b94a-5a60-aa5c-22ccfd3b7d68",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "dbba11d3-fb09-5aaf-9a5a-8c4eb42a0662",
+   "from": {
+    "block": "3326b2c4-298b-5106-b24c-884fa8337602",
+    "port": "result"
+   },
+   "to": {
+    "block": "95409f26-1442-56f2-ab8e-1c67d3b271be",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "7948aa87-428c-5d96-878e-f5786b8dcfbd",
+   "from": {
+    "block": "583c6f1f-b94a-5a60-aa5c-22ccfd3b7d68",
+    "port": "result"
+   },
+   "to": {
+    "block": "95409f26-1442-56f2-ab8e-1c67d3b271be",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "78bfb551-585a-5a2b-9d1b-4deb402245e9",
+   "from": {
+    "block": "eb602b26-20d4-5687-9e67-33924eb42268",
+    "port": "value"
+   },
+   "to": {
+    "block": "b533b737-1e11-5f7c-94a6-7e3a2c1a1330",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "030c5eaf-6a28-59de-84a8-3182bbf2cdac",
+   "from": {
+    "block": "eb602b26-20d4-5687-9e67-33924eb42268",
+    "port": "value"
+   },
+   "to": {
+    "block": "b3620901-710f-5a4f-a39d-d2338edccdcf",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "f48e5e05-cabd-5577-8d0e-f96a2017344a",
+   "from": {
+    "block": "b533b737-1e11-5f7c-94a6-7e3a2c1a1330",
+    "port": "result"
+   },
+   "to": {
+    "block": "3f6dccd8-48d5-5c7e-b62e-5ccb0317a88e",
+    "port": "start"
+   }
+  },
+  {
+   "uuid": "ebbb96c0-55cf-5b37-b59b-f16c4d0f2168",
+   "from": {
+    "block": "b3620901-710f-5a4f-a39d-d2338edccdcf",
+    "port": "result"
+   },
+   "to": {
+    "block": "3f6dccd8-48d5-5c7e-b62e-5ccb0317a88e",
+    "port": "rate"
+   }
+  },
+  {
+   "uuid": "3b251b96-2980-53de-8c34-a97042224fb7",
+   "from": {
+    "block": "95409f26-1442-56f2-ab8e-1c67d3b271be",
+    "port": "result"
+   },
+   "to": {
+    "block": "5bdc19ce-4689-540c-ac55-c39952c001e9",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "e2663e07-bd63-511e-b4ff-c12b7da1e1c6",
+   "from": {
+    "block": "3f6dccd8-48d5-5c7e-b62e-5ccb0317a88e",
+    "port": "value"
+   },
+   "to": {
+    "block": "5bdc19ce-4689-540c-ac55-c39952c001e9",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "e51ed96d-4c7c-5805-8bab-30f676a7649e",
+   "from": {
+    "block": "5bdc19ce-4689-540c-ac55-c39952c001e9",
+    "port": "result"
+   },
+   "to": {
+    "block": "5d94342e-6a70-559a-9a15-6918e03fbd0c",
+    "port": "x"
+   }
+  },
+  {
+   "uuid": "8dfdd9a2-ce2d-5396-9518-145b8adef674",
+   "from": {
+    "block": "ba51f12d-6214-53ae-b663-0ef2093554f4",
+    "port": "value"
+   },
+   "to": {
+    "block": "5d94342e-6a70-559a-9a15-6918e03fbd0c",
+    "port": "opening"
+   }
+  },
+  {
+   "uuid": "128a54e2-c0f3-56e0-98bc-c22d06aaaf24",
+   "from": {
+    "block": "3f6dccd8-48d5-5c7e-b62e-5ccb0317a88e",
+    "port": "value"
+   },
+   "to": {
+    "block": "ec9daa88-720c-5fe3-8faf-a78c12657a69",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "ff548663-a2a6-59e4-be69-ffe5d2298867",
+   "from": {
+    "block": "5d94342e-6a70-559a-9a15-6918e03fbd0c",
+    "port": "result"
+   },
+   "to": {
+    "block": "ec9daa88-720c-5fe3-8faf-a78c12657a69",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "e4d37fde-cb27-595c-be89-e4d3d9bca364",
+   "from": {
+    "block": "ec9daa88-720c-5fe3-8faf-a78c12657a69",
+    "port": "result"
+   },
+   "to": {
+    "block": "7e02db1e-e96b-5f0a-b6f4-e5f431d8601c",
+    "port": "x"
+   }
+  },
+  {
+   "uuid": "99eb365c-a852-5602-a670-472f9a338a30",
+   "from": {
+    "block": "e4ac7aa3-5e70-5d5e-8e43-50b0ac5f6bb2",
+    "port": "value"
+   },
+   "to": {
+    "block": "cfc768a8-b94a-59fe-b26a-fec8a91340fe",
+    "port": "condition"
+   }
+  },
+  {
+   "uuid": "55df4910-7553-596c-8532-e124886ccb7c",
+   "from": {
+    "block": "ba51f12d-6214-53ae-b663-0ef2093554f4",
+    "port": "value"
+   },
+   "to": {
+    "block": "cfc768a8-b94a-59fe-b26a-fec8a91340fe",
+    "port": "then"
+   }
+  },
+  {
+   "uuid": "d3aefc6f-e6d3-55f0-a142-cef09d089fe2",
+   "from": {
+    "block": "7e02db1e-e96b-5f0a-b6f4-e5f431d8601c",
+    "port": "result"
+   },
+   "to": {
+    "block": "cfc768a8-b94a-59fe-b26a-fec8a91340fe",
+    "port": "else"
+   }
+  },
+  {
+   "uuid": "e46830db-8c0e-51cf-8f57-a63fc44ad287",
+   "from": {
+    "block": "cfc768a8-b94a-59fe-b26a-fec8a91340fe",
+    "port": "result"
+   },
+   "to": {
+    "block": "31559bf6-710c-59c5-9488-6fb6021eb0e3",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "560ebc72-7893-5507-9290-35185ce798f9",
+   "from": {
+    "block": "eb602b26-20d4-5687-9e67-33924eb42268",
+    "port": "value"
+   },
+   "to": {
+    "block": "31559bf6-710c-59c5-9488-6fb6021eb0e3",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "7b317388-1685-507b-9ab0-5cc9d1eb2fb8",
+   "from": {
+    "block": "95409f26-1442-56f2-ab8e-1c67d3b271be",
+    "port": "result"
+   },
+   "to": {
+    "block": "a4697a0c-08e9-5f8b-864b-fcc226b1479a",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "5670ee27-8186-5fc3-b394-5b71c6a92978",
+   "from": {
+    "block": "31559bf6-710c-59c5-9488-6fb6021eb0e3",
+    "port": "result"
+   },
+   "to": {
+    "block": "a4697a0c-08e9-5f8b-864b-fcc226b1479a",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "6bcd66c0-a8f2-51eb-8931-eb1863309a03",
+   "from": {
+    "block": "cfc768a8-b94a-59fe-b26a-fec8a91340fe",
+    "port": "result"
+   },
+   "to": {
+    "block": "7b288782-4686-53f4-a2aa-ef1078d9e402",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "c65b2fdd-7f80-5f36-9d59-6ba3230adc0f",
+   "from": {
+    "block": "ec9daa88-720c-5fe3-8faf-a78c12657a69",
+    "port": "result"
+   },
+   "to": {
+    "block": "7b288782-4686-53f4-a2aa-ef1078d9e402",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "ae8ab624-4de5-5213-8883-c6aec148e891",
+   "from": {
+    "block": "7b288782-4686-53f4-a2aa-ef1078d9e402",
+    "port": "result"
+   },
+   "to": {
+    "block": "82424263-419b-56fa-bd55-b4007ce98ac6",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "dfb45f40-eb89-535a-abe8-043dddda452c",
+   "from": {
+    "block": "c55f7492-da4f-5a21-84d7-27e9acd2b057",
+    "port": "value"
+   },
+   "to": {
+    "block": "1d0d1f33-a8b1-5826-bde6-c9b8dccac4fe",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "965fcd7f-3871-54c2-9c17-4e76fbbf2889",
+   "from": {
+    "block": "1d0d1f33-a8b1-5826-bde6-c9b8dccac4fe",
+    "port": "result"
+   },
+   "to": {
+    "block": "4f1cdd23-4106-5460-8efc-ed0318b2b25f",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "d27b1ab0-ac65-58ae-842d-2c4862892c60",
+   "from": {
+    "block": "4f1cdd23-4106-5460-8efc-ed0318b2b25f",
+    "port": "result"
+   },
+   "to": {
+    "block": "ebbcf02e-aad1-52de-b30d-58173f275886",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "24e3d7a7-29a0-51e9-b39d-ff00c25dea84",
+   "from": {
+    "block": "ebbcf02e-aad1-52de-b30d-58173f275886",
+    "port": "result"
+   },
+   "to": {
+    "block": "155bf9ab-542a-51cb-87c0-2b264132a849",
+    "port": "rate"
+   }
+  },
+  {
+   "uuid": "f55e46ee-1d9b-5330-84d1-db9f29825156",
+   "from": {
+    "block": "1c68097b-603f-5371-9fe2-40cd010418b7",
+    "port": "value"
+   },
+   "to": {
+    "block": "c055044e-8934-57d5-832d-4069ffc38f3b",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "5289d5f2-4b31-5770-ac3b-719787713bb2",
+   "from": {
+    "block": "155bf9ab-542a-51cb-87c0-2b264132a849",
+    "port": "value"
+   },
+   "to": {
+    "block": "c055044e-8934-57d5-832d-4069ffc38f3b",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "f05ec83c-ff70-5ab3-beee-f78a1cbb88bc",
+   "from": {
+    "block": "ec9daa88-720c-5fe3-8faf-a78c12657a69",
+    "port": "result"
+   },
+   "to": {
+    "block": "5d057561-a5b9-5788-8542-299ca24183fc",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "904a7580-20f7-5327-8836-960e77a712bd",
+   "from": {
+    "block": "c055044e-8934-57d5-832d-4069ffc38f3b",
+    "port": "result"
+   },
+   "to": {
+    "block": "5d057561-a5b9-5788-8542-299ca24183fc",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "b4fa8cc4-ec7e-5131-b5bd-89ec7d7f99b9",
+   "from": {
+    "block": "5d057561-a5b9-5788-8542-299ca24183fc",
+    "port": "result"
+   },
+   "to": {
+    "block": "c3e8006e-5078-5543-834a-d6b243c35b4d",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "22a0004e-cb6d-5007-835d-fea882695a67",
+   "from": {
+    "block": "95d2471d-4432-5a4f-b103-c45b669962e7",
+    "port": "value"
+   },
+   "to": {
+    "block": "c3e8006e-5078-5543-834a-d6b243c35b4d",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "f259fdc4-a032-52a9-8bf9-8003254de284",
+   "from": {
+    "block": "82424263-419b-56fa-bd55-b4007ce98ac6",
+    "port": "result"
+   },
+   "to": {
+    "block": "8547a2fa-f6c2-5584-acc1-b55b1781006b",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "1f80e841-d2ed-5ea2-8475-4467f20559f2",
+   "from": {
+    "block": "c055044e-8934-57d5-832d-4069ffc38f3b",
+    "port": "result"
+   },
+   "to": {
+    "block": "8547a2fa-f6c2-5584-acc1-b55b1781006b",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "95c3419e-6708-51a5-b808-a073be5d2c46",
+   "from": {
+    "block": "8547a2fa-f6c2-5584-acc1-b55b1781006b",
+    "port": "result"
+   },
+   "to": {
+    "block": "1b4ed93f-1100-547a-a6fe-edebe1175b5a",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "afc3327e-500f-5475-8306-65c28bedb256",
+   "from": {
+    "block": "3fb7060b-a932-5754-9103-d6a158ba9340",
+    "port": "value"
+   },
+   "to": {
+    "block": "1b4ed93f-1100-547a-a6fe-edebe1175b5a",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "7a924db9-f30d-5f26-a314-032d6ee50111",
+   "from": {
+    "block": "82424263-419b-56fa-bd55-b4007ce98ac6",
+    "port": "result"
+   },
+   "to": {
+    "block": "d00f2b47-d220-571f-bf38-4e2abb7ba36b",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "c9873a15-1b6b-537a-80c2-3408b87dc894",
+   "from": {
+    "block": "e569f47e-f128-5a7c-93ff-d9b5e380c9b8",
+    "port": "value"
+   },
+   "to": {
+    "block": "d00f2b47-d220-571f-bf38-4e2abb7ba36b",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "eb10478b-3edc-58bc-909e-76b9d962f98a",
+   "from": {
+    "block": "d00f2b47-d220-571f-bf38-4e2abb7ba36b",
+    "port": "result"
+   },
+   "to": {
+    "block": "bd5ee939-821c-576a-9125-4303d211c2a0",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "4a9bc9ce-1432-5f8b-9ad2-6e397278b05a",
+   "from": {
+    "block": "3fb7060b-a932-5754-9103-d6a158ba9340",
+    "port": "value"
+   },
+   "to": {
+    "block": "bd5ee939-821c-576a-9125-4303d211c2a0",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "ff1ba1aa-ddc7-5c65-8347-6c80cb274d19",
+   "from": {
+    "block": "1b4ed93f-1100-547a-a6fe-edebe1175b5a",
+    "port": "result"
+   },
+   "to": {
+    "block": "5ae6acc1-50db-5557-bbf7-1fc7eae8a59c",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "0af159c2-df6c-58ef-8b42-0094a43b3949",
+   "from": {
+    "block": "1e70fd0c-90b4-5559-bba8-29d0616576d3",
+    "port": "value"
+   },
+   "to": {
+    "block": "5ae6acc1-50db-5557-bbf7-1fc7eae8a59c",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "e18f0354-3d3b-5952-b1c2-8d8f06ec7943",
+   "from": {
+    "block": "1b4ed93f-1100-547a-a6fe-edebe1175b5a",
+    "port": "result"
+   },
+   "to": {
+    "block": "ff37017d-14e9-5609-8a7d-90ba79148fe5",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "334fa284-2d2a-5376-a48e-420a352b77ae",
+   "from": {
+    "block": "6b1768a1-f30a-5569-be1f-617156589e8d",
+    "port": "value"
+   },
+   "to": {
+    "block": "ff37017d-14e9-5609-8a7d-90ba79148fe5",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "0ff0b3d0-dab0-536c-815b-cccf8d96982b",
+   "from": {
+    "block": "bd5ee939-821c-576a-9125-4303d211c2a0",
+    "port": "result"
+   },
+   "to": {
+    "block": "4139612f-7331-5edf-b493-bc5b7740dda7",
+    "port": "in1"
+   }
+  },
+  {
+   "uuid": "400d9638-5286-5c33-a64a-b80096a9e9c3",
+   "from": {
+    "block": "5ae6acc1-50db-5557-bbf7-1fc7eae8a59c",
+    "port": "result"
+   },
+   "to": {
+    "block": "4139612f-7331-5edf-b493-bc5b7740dda7",
+    "port": "in2"
+   }
+  },
+  {
+   "uuid": "958347a3-5147-5e98-91cb-c17181d1d3e7",
+   "from": {
+    "block": "ff37017d-14e9-5609-8a7d-90ba79148fe5",
+    "port": "result"
+   },
+   "to": {
+    "block": "4139612f-7331-5edf-b493-bc5b7740dda7",
+    "port": "in3"
+   }
+  },
+  {
+   "uuid": "2f07205c-cb63-5326-96d0-7156c746790e",
+   "from": {
+    "block": "1b4ed93f-1100-547a-a6fe-edebe1175b5a",
+    "port": "result"
+   },
+   "to": {
+    "block": "2bdd4424-c6dd-5f57-9b70-10dd1659b3e8",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "afb5d52d-3f78-54f0-b1b2-d54c590c2ed4",
+   "from": {
+    "block": "4139612f-7331-5edf-b493-bc5b7740dda7",
+    "port": "result"
+   },
+   "to": {
+    "block": "2bdd4424-c6dd-5f57-9b70-10dd1659b3e8",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "4c417383-1cf7-5528-9e65-1318140ad9fc",
+   "from": {
+    "block": "2bdd4424-c6dd-5f57-9b70-10dd1659b3e8",
+    "port": "result"
+   },
+   "to": {
+    "block": "ff4771d7-cd18-523d-a691-d047df415d0c",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "61e4901e-aadd-57db-9074-52b2b2094eb9",
+   "from": {
+    "block": "1b4ed93f-1100-547a-a6fe-edebe1175b5a",
+    "port": "result"
+   },
+   "to": {
+    "block": "ff4771d7-cd18-523d-a691-d047df415d0c",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "8bfcf6b2-766f-53be-9f56-4acece2cdd21",
+   "from": {
+    "block": "6663b4f0-cd95-5a21-90e4-ba1d1715aa46",
+    "port": "value"
+   },
+   "to": {
+    "block": "4c661f1d-c74d-5881-8342-8876ed1c5988",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "a7c0aa33-e075-511a-898f-642578d3ae90",
+   "from": {
+    "block": "922dfc40-8016-5fbf-82ed-72305358a80b",
+    "port": "value"
+   },
+   "to": {
+    "block": "4c661f1d-c74d-5881-8342-8876ed1c5988",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "c0a46ec0-1228-543d-9886-fc8875b21bd0",
+   "from": {
+    "block": "140e8edd-5f1a-53a8-9ab5-e8a9f8f97f7b",
+    "port": "value"
+   },
+   "to": {
+    "block": "0d0b0130-4e0c-5ddc-88e9-d041d9efcebb",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "fba21995-d273-5f89-b836-cd8283fd9025",
+   "from": {
+    "block": "4c661f1d-c74d-5881-8342-8876ed1c5988",
+    "port": "result"
+   },
+   "to": {
+    "block": "0d0b0130-4e0c-5ddc-88e9-d041d9efcebb",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "18e3a372-b748-5181-a6f6-c10df0b106e3",
+   "from": {
+    "block": "8d495a82-9860-5773-bd43-2d6eba19108f",
+    "port": "value"
+   },
+   "to": {
+    "block": "610acff2-5990-5bac-9386-358358af9afa",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "45d77fc3-0f18-52f4-9bcc-126a47d0549d",
+   "from": {
+    "block": "f2b3f1f9-4a1b-5169-9d58-343a93f56ec5",
+    "port": "value"
+   },
+   "to": {
+    "block": "610acff2-5990-5bac-9386-358358af9afa",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "8ca674ed-dec5-5689-bd60-05542a33fb3d",
+   "from": {
+    "block": "1899e448-6585-5524-ae94-5426a6a05422",
+    "port": "value"
+   },
+   "to": {
+    "block": "d48c4bbf-0f0b-50a6-9bce-c34ef8dd5af4",
+    "port": "start"
+   }
+  },
+  {
+   "uuid": "2c6b43a1-1c15-5265-b113-7973ff23f5f1",
+   "from": {
+    "block": "8cd8ba2b-fa48-591d-8e28-ef7faaa5f695",
+    "port": "value"
+   },
+   "to": {
+    "block": "d48c4bbf-0f0b-50a6-9bce-c34ef8dd5af4",
+    "port": "rate"
+   }
+  },
+  {
+   "uuid": "474437e0-0cf2-5188-baf5-f823401c5c8c",
+   "from": {
+    "block": "a08c346f-02d3-5003-a7c6-1facd114f754",
+    "port": "value"
+   },
+   "to": {
+    "block": "7d3f560a-373c-5d61-851a-9724cc11e8a6",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "60ac3dde-9045-50b6-8479-68caaf7b0fcf",
+   "from": {
+    "block": "9e6ce471-486a-5642-b99a-7359e1a1c41e",
+    "port": "value"
+   },
+   "to": {
+    "block": "7d3f560a-373c-5d61-851a-9724cc11e8a6",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "b3986bbc-9a4b-5587-aa1e-e8b7f7997351",
+   "from": {
+    "block": "7d3f560a-373c-5d61-851a-9724cc11e8a6",
+    "port": "result"
+   },
+   "to": {
+    "block": "97e20e39-70bc-5cdd-b176-310236aa4ea0",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "e36cb759-5c03-528b-ac64-2ade10cb2a75",
+   "from": {
+    "block": "d48c4bbf-0f0b-50a6-9bce-c34ef8dd5af4",
+    "port": "value"
+   },
+   "to": {
+    "block": "97e20e39-70bc-5cdd-b176-310236aa4ea0",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "cfd2159f-6bc8-5ebb-a5a3-8b53af81ff9b",
+   "from": {
+    "block": "d8f7e9d2-d971-5d30-8b91-b70b4bf2c95a",
+    "port": "value"
+   },
+   "to": {
+    "block": "4f435902-ad30-5c57-9b47-cc5a43f1e9d1",
+    "port": "amount"
+   }
+  },
+  {
+   "uuid": "be8ad365-57ce-5d12-a80d-18c25bac82f3",
+   "from": {
+    "block": "37735224-4026-55a1-8d7e-92023be18d20",
+    "port": "value"
+   },
+   "to": {
+    "block": "4f435902-ad30-5c57-9b47-cc5a43f1e9d1",
+    "port": "start"
+   }
+  },
+  {
+   "uuid": "f8b31610-6327-529e-b12d-26535accca22",
+   "from": {
+    "block": "952d24f9-47ab-59c7-b94d-fffd0d81c73d",
+    "port": "value"
+   },
+   "to": {
+    "block": "4f435902-ad30-5c57-9b47-cc5a43f1e9d1",
+    "port": "periods"
+   }
+  },
+  {
+   "uuid": "4e3f7a37-13bd-5de6-bb93-f3ddbcf9dd65",
+   "from": {
+    "block": "0d0b0130-4e0c-5ddc-88e9-d041d9efcebb",
+    "port": "result"
+   },
+   "to": {
+    "block": "0c14674e-210e-58b3-a697-bf0dbcb8c380",
+    "port": "in1"
+   }
+  },
+  {
+   "uuid": "4d3e663c-f747-5f5c-9f65-46c97a96dced",
+   "from": {
+    "block": "610acff2-5990-5bac-9386-358358af9afa",
+    "port": "result"
+   },
+   "to": {
+    "block": "0c14674e-210e-58b3-a697-bf0dbcb8c380",
+    "port": "in2"
+   }
+  },
+  {
+   "uuid": "5f453457-c8e1-57b1-a70b-97e57c718060",
+   "from": {
+    "block": "97e20e39-70bc-5cdd-b176-310236aa4ea0",
+    "port": "result"
+   },
+   "to": {
+    "block": "0c14674e-210e-58b3-a697-bf0dbcb8c380",
+    "port": "in3"
+   }
+  },
+  {
+   "uuid": "51856ac1-ad77-5390-a8ce-fc343a69b43f",
+   "from": {
+    "block": "4f435902-ad30-5c57-9b47-cc5a43f1e9d1",
+    "port": "value"
+   },
+   "to": {
+    "block": "0c14674e-210e-58b3-a697-bf0dbcb8c380",
+    "port": "in4"
+   }
+  },
+  {
+   "uuid": "fe354a92-12a4-53bf-85a3-0c03c50d00b4",
+   "from": {
+    "block": "2bdd4424-c6dd-5f57-9b70-10dd1659b3e8",
+    "port": "result"
+   },
+   "to": {
+    "block": "d95c62e9-5647-520a-94f3-0be651344fae",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "aaadce26-da2a-5b71-9c97-1821162000f0",
+   "from": {
+    "block": "0c14674e-210e-58b3-a697-bf0dbcb8c380",
+    "port": "result"
+   },
+   "to": {
+    "block": "d95c62e9-5647-520a-94f3-0be651344fae",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "6da7f457-132d-5eca-a4fd-9c1eff82857e",
+   "from": {
+    "block": "d95c62e9-5647-520a-94f3-0be651344fae",
+    "port": "result"
+   },
+   "to": {
+    "block": "8857a4aa-f5a6-5613-a8a2-63dc6413d4af",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "00858de1-b7a1-576d-ab3c-618133e020d4",
+   "from": {
+    "block": "1b4ed93f-1100-547a-a6fe-edebe1175b5a",
+    "port": "result"
+   },
+   "to": {
+    "block": "8857a4aa-f5a6-5613-a8a2-63dc6413d4af",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "6da11f15-c11a-566f-9e4b-85b7616bf06e",
+   "from": {
+    "block": "1b4ed93f-1100-547a-a6fe-edebe1175b5a",
+    "port": "result"
+   },
+   "to": {
+    "block": "7bd6b33d-6e14-5548-b03a-67d17f316b58",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "c6a47eb4-33f4-5b96-87d0-42d7b6e2a085",
+   "from": {
+    "block": "6a12badc-748e-56ca-8842-7ea030b9bdaf",
+    "port": "value"
+   },
+   "to": {
+    "block": "7bd6b33d-6e14-5548-b03a-67d17f316b58",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "e0f262d4-2f39-5dbb-b5e8-22c703467425",
+   "from": {
+    "block": "60c7d167-2cbc-5f11-929d-8c7a01eac9df",
+    "port": "value"
+   },
+   "to": {
+    "block": "85919ec4-fbdf-5a81-8568-00d926f14acd",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "cd7d8b86-f258-52b3-82ff-7277d381a9a6",
+   "from": {
+    "block": "7bd6b33d-6e14-5548-b03a-67d17f316b58",
+    "port": "result"
+   },
+   "to": {
+    "block": "85919ec4-fbdf-5a81-8568-00d926f14acd",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "b7f66225-9364-5353-8f2f-70233a5d6395",
+   "from": {
+    "block": "85919ec4-fbdf-5a81-8568-00d926f14acd",
+    "port": "result"
+   },
+   "to": {
+    "block": "11e5ce74-9ae9-5649-a376-0bc50504ccc4",
+    "port": "capex"
+   }
+  },
+  {
+   "uuid": "1459b234-f43d-5117-9860-091d1ea3d6e1",
+   "from": {
+    "block": "aef30edc-8ad1-5a9d-8db3-04b23af7940d",
+    "port": "value"
+   },
+   "to": {
+    "block": "11e5ce74-9ae9-5649-a376-0bc50504ccc4",
+    "port": "life"
+   }
+  },
+  {
+   "uuid": "8e7fdb27-063b-5a3c-85ad-8771b28c8435",
+   "from": {
+    "block": "d95c62e9-5647-520a-94f3-0be651344fae",
+    "port": "result"
+   },
+   "to": {
+    "block": "a09b6b36-becc-5a2a-a78d-83ac02168a5e",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "dd7d5717-6a2d-5077-9e0a-8f609121a659",
+   "from": {
+    "block": "11e5ce74-9ae9-5649-a376-0bc50504ccc4",
+    "port": "result"
+   },
+   "to": {
+    "block": "a09b6b36-becc-5a2a-a78d-83ac02168a5e",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "5d7a45d4-2db6-5106-aba4-d4f37532ec95",
+   "from": {
+    "block": "a09b6b36-becc-5a2a-a78d-83ac02168a5e",
+    "port": "result"
+   },
+   "to": {
+    "block": "a5b10eb3-1878-5725-b2b3-456900550504",
+    "port": "x"
+   }
+  },
+  {
+   "uuid": "ea88d5f3-b2dc-5518-a997-3c23fe2f9fbf",
+   "from": {
+    "block": "a5b10eb3-1878-5725-b2b3-456900550504",
+    "port": "result"
+   },
+   "to": {
+    "block": "c5e00f67-8ace-5c15-9be0-5a4435ce4885",
+    "port": "x"
+   }
+  },
+  {
+   "uuid": "f64eb709-e4fa-587b-927e-5ae306116a1f",
+   "from": {
+    "block": "c5e00f67-8ace-5c15-9be0-5a4435ce4885",
+    "port": "result"
+   },
+   "to": {
+    "block": "18c2cffe-58d1-5ffc-b9d6-9f58e724b981",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "576ac84a-1c85-5dc4-abb6-dcfd8398efbd",
+   "from": {
+    "block": "18c2cffe-58d1-5ffc-b9d6-9f58e724b981",
+    "port": "result"
+   },
+   "to": {
+    "block": "58718950-a6b8-525b-9ba7-07b8034a944c",
+    "port": "x"
+   }
+  },
+  {
+   "uuid": "0a3e15be-8d68-52ce-830b-43288b1d6336",
+   "from": {
+    "block": "18c2cffe-58d1-5ffc-b9d6-9f58e724b981",
+    "port": "result"
+   },
+   "to": {
+    "block": "2bdd8874-2000-5787-89a9-46d17b247dcf",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "35b2ca75-da9c-5997-8521-93c0a177aaa3",
+   "from": {
+    "block": "58718950-a6b8-525b-9ba7-07b8034a944c",
+    "port": "result"
+   },
+   "to": {
+    "block": "2bdd8874-2000-5787-89a9-46d17b247dcf",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "749f71f7-986f-58ce-b44e-9854ec0ade00",
+   "from": {
+    "block": "2bdd8874-2000-5787-89a9-46d17b247dcf",
+    "port": "result"
+   },
+   "to": {
+    "block": "3413f783-213c-5cd5-8f06-3dbe01e718a3",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "f8051abd-c974-5c70-b8ff-e36c88076c22",
+   "from": {
+    "block": "6efe7783-1fe3-5fff-b563-5304f5068b24",
+    "port": "value"
+   },
+   "to": {
+    "block": "3413f783-213c-5cd5-8f06-3dbe01e718a3",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "835612e7-0cb0-5fb7-b6d3-8cc352769b26",
+   "from": {
+    "block": "a09b6b36-becc-5a2a-a78d-83ac02168a5e",
+    "port": "result"
+   },
+   "to": {
+    "block": "ac7f526e-c5fe-5362-bb07-2aa126d4b32f",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "b8f51cc1-3874-56b9-85e2-7d4d26086942",
+   "from": {
+    "block": "3413f783-213c-5cd5-8f06-3dbe01e718a3",
+    "port": "result"
+   },
+   "to": {
+    "block": "ac7f526e-c5fe-5362-bb07-2aa126d4b32f",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "c5b9f6b3-30d9-577a-9127-4bfbdb779b56",
+   "from": {
+    "block": "1b4ed93f-1100-547a-a6fe-edebe1175b5a",
+    "port": "result"
+   },
+   "to": {
+    "block": "e4dc3221-d517-5f85-841d-c18dc08bbc57",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "9be6528a-5312-585a-a3fb-3ec3a88f7a2a",
+   "from": {
+    "block": "bc4a54ce-a6e4-52d5-b991-878abf0d0499",
+    "port": "value"
+   },
+   "to": {
+    "block": "e4dc3221-d517-5f85-841d-c18dc08bbc57",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "9c38417d-8282-5360-a84e-6d9a74d4e9a4",
+   "from": {
+    "block": "e4dc3221-d517-5f85-841d-c18dc08bbc57",
+    "port": "result"
+   },
+   "to": {
+    "block": "d432f502-3ef3-5fea-b507-82a872b9e018",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "db4d0e42-42aa-527d-86ca-601b1564668f",
+   "from": {
+    "block": "74bd61b8-4954-5772-a52d-c0a7ec52bbbe",
+    "port": "value"
+   },
+   "to": {
+    "block": "d432f502-3ef3-5fea-b507-82a872b9e018",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "3fab0bf2-0181-5c9e-adf1-945547179b28",
+   "from": {
+    "block": "1b4ed93f-1100-547a-a6fe-edebe1175b5a",
+    "port": "result"
+   },
+   "to": {
+    "block": "2f5f9ab8-8374-531e-9733-329a1a590849",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "4a9a3b61-8de9-5244-ab7a-bddaa627e1c2",
+   "from": {
+    "block": "12d94186-aed3-5c86-8fea-eeec3c048c6c",
+    "port": "value"
+   },
+   "to": {
+    "block": "2f5f9ab8-8374-531e-9733-329a1a590849",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "8a106a0a-20fc-587f-bd66-dd225f564466",
+   "from": {
+    "block": "2f5f9ab8-8374-531e-9733-329a1a590849",
+    "port": "result"
+   },
+   "to": {
+    "block": "34b8f0b7-144a-50e6-92be-6c65958a11ea",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "b6247947-8d82-5d55-8c55-419e516815aa",
+   "from": {
+    "block": "3a73b67c-df0d-53bf-a132-86815d9a7e8a",
+    "port": "value"
+   },
+   "to": {
+    "block": "34b8f0b7-144a-50e6-92be-6c65958a11ea",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "ebb49234-6456-566c-a8c7-982c75f741b9",
+   "from": {
+    "block": "4139612f-7331-5edf-b493-bc5b7740dda7",
+    "port": "result"
+   },
+   "to": {
+    "block": "cde7be23-d7c6-5377-bc0b-86c60c1ed241",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "d351ef99-99fe-5ee8-909d-3b650ab8fd8d",
+   "from": {
+    "block": "d48c4bbf-0f0b-50a6-9bce-c34ef8dd5af4",
+    "port": "value"
+   },
+   "to": {
+    "block": "cde7be23-d7c6-5377-bc0b-86c60c1ed241",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "3c2d4fcb-215f-5098-9369-6a23f6aad8b7",
+   "from": {
+    "block": "cde7be23-d7c6-5377-bc0b-86c60c1ed241",
+    "port": "result"
+   },
+   "to": {
+    "block": "1fc66d0f-911b-5037-80e3-24bbb4217260",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "b65dc82b-9669-5b51-94fd-f3a46cc0dbfd",
+   "from": {
+    "block": "f89cdb47-1b9c-5000-90c3-4c1b0d7b45ed",
+    "port": "value"
+   },
+   "to": {
+    "block": "1fc66d0f-911b-5037-80e3-24bbb4217260",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "0c1eae3e-05c6-5251-94d7-c2d9dbce4266",
+   "from": {
+    "block": "1fc66d0f-911b-5037-80e3-24bbb4217260",
+    "port": "result"
+   },
+   "to": {
+    "block": "f2a84bec-3f89-5de3-95d5-66269c2d5b61",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "f780044a-cac2-5754-86f3-8fe8cccd7d58",
+   "from": {
+    "block": "74bd61b8-4954-5772-a52d-c0a7ec52bbbe",
+    "port": "value"
+   },
+   "to": {
+    "block": "f2a84bec-3f89-5de3-95d5-66269c2d5b61",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "cb58b066-c99c-532e-812d-e0ca9b156fc0",
+   "from": {
+    "block": "d432f502-3ef3-5fea-b507-82a872b9e018",
+    "port": "result"
+   },
+   "to": {
+    "block": "bd063655-62b8-53b0-9e05-21fcedf8aec9",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "02e90edc-e132-5239-83ad-dc55c391c2ca",
+   "from": {
+    "block": "34b8f0b7-144a-50e6-92be-6c65958a11ea",
+    "port": "result"
+   },
+   "to": {
+    "block": "bd063655-62b8-53b0-9e05-21fcedf8aec9",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "64a9d8d0-1184-5f09-b6be-006a19831a85",
+   "from": {
+    "block": "bd063655-62b8-53b0-9e05-21fcedf8aec9",
+    "port": "result"
+   },
+   "to": {
+    "block": "f539161d-b240-55f6-88e5-54d31fede1f2",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "1acc990b-b31a-54f1-b3f4-ee2212efbb82",
+   "from": {
+    "block": "f2a84bec-3f89-5de3-95d5-66269c2d5b61",
+    "port": "result"
+   },
+   "to": {
+    "block": "f539161d-b240-55f6-88e5-54d31fede1f2",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "f28c12d8-3524-5425-ad2b-c349bf4f72ac",
+   "from": {
+    "block": "f539161d-b240-55f6-88e5-54d31fede1f2",
+    "port": "result"
+   },
+   "to": {
+    "block": "a88d87e7-9dd2-5fd4-9e27-dceda6d5c432",
+    "port": "x"
+   }
+  },
+  {
+   "uuid": "c09a60f1-6a34-5a57-858b-d51da943df22",
+   "from": {
+    "block": "f539161d-b240-55f6-88e5-54d31fede1f2",
+    "port": "result"
+   },
+   "to": {
+    "block": "e96c68ae-41cc-550c-99e7-5bfba42fff72",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "8f7d29ea-24e5-5579-bad9-69240139d148",
+   "from": {
+    "block": "a88d87e7-9dd2-5fd4-9e27-dceda6d5c432",
+    "port": "result"
+   },
+   "to": {
+    "block": "e96c68ae-41cc-550c-99e7-5bfba42fff72",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "e4a95dad-8a9d-530c-9f50-e58d04c1d73d",
+   "from": {
+    "block": "d95c62e9-5647-520a-94f3-0be651344fae",
+    "port": "result"
+   },
+   "to": {
+    "block": "1b0024d9-2f93-58f8-b0e0-f22d7b2b6f22",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "e5cebe47-feb7-5af7-8f25-151c731cda87",
+   "from": {
+    "block": "3413f783-213c-5cd5-8f06-3dbe01e718a3",
+    "port": "result"
+   },
+   "to": {
+    "block": "1b0024d9-2f93-58f8-b0e0-f22d7b2b6f22",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "f44e791f-7905-5452-a592-c26c722a6195",
+   "from": {
+    "block": "1b0024d9-2f93-58f8-b0e0-f22d7b2b6f22",
+    "port": "result"
+   },
+   "to": {
+    "block": "092bb52a-439a-5379-8737-e047a4bc482b",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "9a3c6077-3fa6-5523-87d9-e85afa1294db",
+   "from": {
+    "block": "85919ec4-fbdf-5a81-8568-00d926f14acd",
+    "port": "result"
+   },
+   "to": {
+    "block": "092bb52a-439a-5379-8737-e047a4bc482b",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "6da53306-b4bf-5a2a-8779-987316a9e6ca",
+   "from": {
+    "block": "092bb52a-439a-5379-8737-e047a4bc482b",
+    "port": "result"
+   },
+   "to": {
+    "block": "1577dffe-82ad-54c7-bb7a-fad074fbb662",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "d372176d-93c9-531e-afdb-99ad8a4e9179",
+   "from": {
+    "block": "e96c68ae-41cc-550c-99e7-5bfba42fff72",
+    "port": "result"
+   },
+   "to": {
+    "block": "1577dffe-82ad-54c7-bb7a-fad074fbb662",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "e57b7858-8381-51b9-96e8-5e38a998d274",
+   "from": {
+    "block": "1577dffe-82ad-54c7-bb7a-fad074fbb662",
+    "port": "result"
+   },
+   "to": {
+    "block": "89bdd08a-60e3-55b9-b4f0-e11c6546e499",
+    "port": "x"
+   }
+  },
+  {
+   "uuid": "072b0b05-0de5-5a06-94d8-45dcd1a39b2e",
+   "from": {
+    "block": "1577dffe-82ad-54c7-bb7a-fad074fbb662",
+    "port": "result"
+   },
+   "to": {
+    "block": "f753efb4-ed9d-53ca-9023-4ba740d265fa",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "d8c0402a-ce1f-5603-829d-f7d831b302e1",
+   "from": {
+    "block": "af1a5f3b-707f-5212-865c-91f710760c76",
+    "port": "value"
+   },
+   "to": {
+    "block": "f753efb4-ed9d-53ca-9023-4ba740d265fa",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "1c55a6d7-6b8b-541f-9de6-379b41f66b67",
+   "from": {
+    "block": "f753efb4-ed9d-53ca-9023-4ba740d265fa",
+    "port": "result"
+   },
+   "to": {
+    "block": "de8a5486-8b54-5c23-afe8-6f1d9dcabd0f",
+    "port": "x"
+   }
+  },
+  {
+   "uuid": "45a0b50b-0e07-5f19-a3ef-2e996dbd02cd",
+   "from": {
+    "block": "1bdaf9ab-a8f9-514f-a784-7d97349fa13d",
+    "port": "value"
+   },
+   "to": {
+    "block": "de8a5486-8b54-5c23-afe8-6f1d9dcabd0f",
+    "port": "opening"
+   }
+  },
+  {
+   "uuid": "a1e6c1f8-e48e-56af-8018-425e450ccee6",
+   "from": {
+    "block": "de8a5486-8b54-5c23-afe8-6f1d9dcabd0f",
+    "port": "result"
+   },
+   "to": {
+    "block": "517df049-f675-5357-b70d-6f48549bc01b",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "376cd006-2000-5289-a2c2-4db84c8b037d",
+   "from": {
+    "block": "5068307e-e459-5669-b39f-30656a7005a5",
+    "port": "value"
+   },
+   "to": {
+    "block": "517df049-f675-5357-b70d-6f48549bc01b",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "6aec6ecc-7f3e-5b7c-91c0-9a9c63c0b2e7",
+   "from": {
+    "block": "1577dffe-82ad-54c7-bb7a-fad074fbb662",
+    "port": "result"
+   },
+   "to": {
+    "block": "92761999-163d-5673-a32b-13ba015cbe58",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "554d7ee4-4336-5481-80bf-4f7df2fdc6c7",
+   "from": {
+    "block": "92761999-163d-5673-a32b-13ba015cbe58",
+    "port": "result"
+   },
+   "to": {
+    "block": "cbd00925-78d5-5d74-b2ba-f6cf8ba355c1",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "6d42cf69-fdef-582f-a07a-ca3c6b3e3637",
+   "from": {
+    "block": "de8a5486-8b54-5c23-afe8-6f1d9dcabd0f",
+    "port": "result"
+   },
+   "to": {
+    "block": "04e8c1aa-eab9-559b-b1b8-8b55b3f9ecea",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "9ee33e9b-66ef-5c41-bcf9-85254d1a2ddb",
+   "from": {
+    "block": "cbd00925-78d5-5d74-b2ba-f6cf8ba355c1",
+    "port": "result"
+   },
+   "to": {
+    "block": "04e8c1aa-eab9-559b-b1b8-8b55b3f9ecea",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "8dfc0365-8849-5845-9856-eb0cab2c9392",
+   "from": {
+    "block": "0d0b0130-4e0c-5ddc-88e9-d041d9efcebb",
+    "port": "result"
+   },
+   "to": {
+    "block": "44fcfb05-1836-5a76-a585-795df5ebaab5",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "0fba2967-a6f7-572c-ae5d-92c862b67930",
+   "from": {
+    "block": "95409f26-1442-56f2-ab8e-1c67d3b271be",
+    "port": "result"
+   },
+   "to": {
+    "block": "44fcfb05-1836-5a76-a585-795df5ebaab5",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "040ee8fd-e2db-536e-adaf-17e352cc5e87",
+   "from": {
+    "block": "c055044e-8934-57d5-832d-4069ffc38f3b",
+    "port": "result"
+   },
+   "to": {
+    "block": "d9f886f6-f47d-5363-a72e-d55fba8a01f4",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "999f0d27-5516-5ca2-8b94-9edd3db36f36",
+   "from": {
+    "block": "ff4771d7-cd18-523d-a691-d047df415d0c",
+    "port": "result"
+   },
+   "to": {
+    "block": "d9f886f6-f47d-5363-a72e-d55fba8a01f4",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "a7b25fc1-b155-5767-af0c-547bb2aa86be",
+   "from": {
+    "block": "eb602b26-20d4-5687-9e67-33924eb42268",
+    "port": "value"
+   },
+   "to": {
+    "block": "188924e3-f666-5115-9e1b-90ceddd4ccd2",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "6d0d3642-236c-53e6-b34a-59b23a869d66",
+   "from": {
+    "block": "d9f886f6-f47d-5363-a72e-d55fba8a01f4",
+    "port": "result"
+   },
+   "to": {
+    "block": "c9fafb4c-a145-5972-9b81-e8a8e1cf73fa",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "26bad713-24ff-5346-8cf4-a29ce80a81b2",
+   "from": {
+    "block": "3fb7060b-a932-5754-9103-d6a158ba9340",
+    "port": "value"
+   },
+   "to": {
+    "block": "c9fafb4c-a145-5972-9b81-e8a8e1cf73fa",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "205c72d8-3569-5f9a-9c46-8eccab29cf19",
+   "from": {
+    "block": "c9fafb4c-a145-5972-9b81-e8a8e1cf73fa",
+    "port": "result"
+   },
+   "to": {
+    "block": "2c814a3f-2645-5a9b-8d68-a860dfff864d",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "22606e58-19e0-5e87-ba40-36a8d589dbfa",
+   "from": {
+    "block": "188924e3-f666-5115-9e1b-90ceddd4ccd2",
+    "port": "result"
+   },
+   "to": {
+    "block": "2c814a3f-2645-5a9b-8d68-a860dfff864d",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "f21e2a4c-a8c8-5fb5-94bf-5c88f390ef52",
+   "from": {
+    "block": "2c814a3f-2645-5a9b-8d68-a860dfff864d",
+    "port": "result"
+   },
+   "to": {
+    "block": "0dacba46-fb07-5499-aa62-63ccade2e65a",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "1dda154b-c6a0-5107-bf70-b71b250576bd",
+   "from": {
+    "block": "44fcfb05-1836-5a76-a585-795df5ebaab5",
+    "port": "result"
+   },
+   "to": {
+    "block": "0dacba46-fb07-5499-aa62-63ccade2e65a",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "043754fe-bc4d-587f-9e04-3a5ed70abfd3",
+   "from": {
+    "block": "44fcfb05-1836-5a76-a585-795df5ebaab5",
+    "port": "result"
+   },
+   "to": {
+    "block": "815a2f5b-bc8a-5a41-b02f-0219e82d212d",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "aec2dbed-2f39-5225-a7dd-dd7d2f0edcb7",
+   "from": {
+    "block": "d9f886f6-f47d-5363-a72e-d55fba8a01f4",
+    "port": "result"
+   },
+   "to": {
+    "block": "815a2f5b-bc8a-5a41-b02f-0219e82d212d",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "b8674980-7638-57a3-89a5-7299c2828e59",
+   "from": {
+    "block": "1b4ed93f-1100-547a-a6fe-edebe1175b5a",
+    "port": "result"
+   },
+   "to": {
+    "block": "06921fdf-5f31-50b3-ae8c-d0db2294ebd0",
+    "port": "x"
+   }
+  },
+  {
+   "uuid": "130c1841-bd3b-5f3b-9990-d6a392e2c7aa",
+   "from": {
+    "block": "1b4ed93f-1100-547a-a6fe-edebe1175b5a",
+    "port": "result"
+   },
+   "to": {
+    "block": "6713daec-a9a1-5310-87c4-3838f159dabd",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "57b1b560-1a7f-5ca7-a46c-725c34f32d64",
+   "from": {
+    "block": "06921fdf-5f31-50b3-ae8c-d0db2294ebd0",
+    "port": "result"
+   },
+   "to": {
+    "block": "6713daec-a9a1-5310-87c4-3838f159dabd",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "1e833207-672b-5082-98c3-458042717112",
+   "from": {
+    "block": "1b4ed93f-1100-547a-a6fe-edebe1175b5a",
+    "port": "result"
+   },
+   "to": {
+    "block": "0e9b9823-c923-5cec-9770-206be522de35",
+    "port": "x"
+   }
+  },
+  {
+   "uuid": "05b0736b-3055-50df-8bf9-e12dd8cd6211",
+   "from": {
+    "block": "6713daec-a9a1-5310-87c4-3838f159dabd",
+    "port": "result"
+   },
+   "to": {
+    "block": "ad4a0bf9-db5d-53c5-8bae-81a436f11d7d",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "6f901b01-d7a0-53b2-98fe-7f63a399a31c",
+   "from": {
+    "block": "0e9b9823-c923-5cec-9770-206be522de35",
+    "port": "result"
+   },
+   "to": {
+    "block": "ad4a0bf9-db5d-53c5-8bae-81a436f11d7d",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "eaf4a5ea-245b-5be1-a424-d845a8b7d5a8",
+   "from": {
+    "block": "ad4a0bf9-db5d-53c5-8bae-81a436f11d7d",
+    "port": "result"
+   },
+   "to": {
+    "block": "d4fb3bd0-9920-5a3a-9887-515491ddfd5e",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "36322b8f-2735-5e48-be65-a87c86678b1a",
+   "from": {
+    "block": "8857a4aa-f5a6-5613-a8a2-63dc6413d4af",
+    "port": "result"
+   },
+   "to": {
+    "block": "d4fb3bd0-9920-5a3a-9887-515491ddfd5e",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "ae337f14-23b6-5a49-806a-01a8db0404a3",
+   "from": {
+    "block": "d4fb3bd0-9920-5a3a-9887-515491ddfd5e",
+    "port": "result"
+   },
+   "to": {
+    "block": "fd2f197a-feea-5283-952a-3b283fab77c9",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "800783c8-bef0-55fd-84ef-6e0e79bad992",
+   "from": {
+    "block": "c3e8006e-5078-5543-834a-d6b243c35b4d",
+    "port": "result"
+   },
+   "to": {
+    "block": "e4e9dc35-8d3f-5b40-8f43-9643d212ec2e",
+    "port": "x"
+   }
+  },
+  {
+   "uuid": "68254861-9dfd-5559-843a-b1b0feceae88",
+   "from": {
+    "block": "c3e8006e-5078-5543-834a-d6b243c35b4d",
+    "port": "result"
+   },
+   "to": {
+    "block": "d99a582e-3cac-5157-a183-1fa3639e5fbb",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "e369f4ec-1059-56a8-bcbd-ed8037c9923f",
+   "from": {
+    "block": "e4e9dc35-8d3f-5b40-8f43-9643d212ec2e",
+    "port": "result"
+   },
+   "to": {
+    "block": "d99a582e-3cac-5157-a183-1fa3639e5fbb",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "88b31e0e-3fcd-5b61-a53b-c1eb9b319432",
+   "from": {
+    "block": "cbd00925-78d5-5d74-b2ba-f6cf8ba355c1",
+    "port": "result"
+   },
+   "to": {
+    "block": "eadbea98-622c-5ef6-852c-e82c6fbff2a0",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "425413b7-e502-50d3-b007-9e4a610662a1",
+   "from": {
+    "block": "d99a582e-3cac-5157-a183-1fa3639e5fbb",
+    "port": "result"
+   },
+   "to": {
+    "block": "eadbea98-622c-5ef6-852c-e82c6fbff2a0",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "712cc149-4834-5478-bfa3-48317d76fdd9",
+   "from": {
+    "block": "6663b4f0-cd95-5a21-90e4-ba1d1715aa46",
+    "port": "value"
+   },
+   "to": {
+    "block": "9e9ff088-d2ea-52b5-81fb-4d14f2bda254",
+    "port": "in1"
+   }
+  },
+  {
+   "uuid": "fd08eab1-007e-56e1-98bc-b2c530b939b1",
+   "from": {
+    "block": "8d495a82-9860-5773-bd43-2d6eba19108f",
+    "port": "value"
+   },
+   "to": {
+    "block": "9e9ff088-d2ea-52b5-81fb-4d14f2bda254",
+    "port": "in2"
+   }
+  },
+  {
+   "uuid": "77dccb4d-7e14-54fb-8a70-dfc074399cfd",
+   "from": {
+    "block": "a08c346f-02d3-5003-a7c6-1facd114f754",
+    "port": "value"
+   },
+   "to": {
+    "block": "9e9ff088-d2ea-52b5-81fb-4d14f2bda254",
+    "port": "in3"
+   }
+  },
+  {
+   "uuid": "7a9f9bff-6a61-5e0a-871e-128fc295cb60",
+   "from": {
+    "block": "1b4ed93f-1100-547a-a6fe-edebe1175b5a",
+    "port": "result"
+   },
+   "to": {
+    "block": "49a01e0c-0885-5382-9083-17a2957b1590",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "0afc6595-7afb-5cb7-be7b-ea062bca1a89",
+   "from": {
+    "block": "49a01e0c-0885-5382-9083-17a2957b1590",
+    "port": "result"
+   },
+   "to": {
+    "block": "9e076622-fb08-5172-9e5b-887f133c3cca",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "ad9c7393-b4e1-5487-b1f5-e3981e56f1ae",
+   "from": {
+    "block": "9e9ff088-d2ea-52b5-81fb-4d14f2bda254",
+    "port": "result"
+   },
+   "to": {
+    "block": "9e076622-fb08-5172-9e5b-887f133c3cca",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "24dbe71e-0d37-5ccf-b7fb-a78e101114b1",
+   "from": {
+    "block": "95409f26-1442-56f2-ab8e-1c67d3b271be",
+    "port": "result"
+   },
+   "to": {
+    "block": "7ef35bae-eefd-57ba-ab76-c00258357eb0",
+    "port": "x"
+   }
+  },
+  {
+   "uuid": "e8321dac-dd3c-58f8-af81-512e5ac0c030",
+   "from": {
+    "block": "60aa941e-6649-567f-82dd-3e434a83d0bb",
+    "port": "value"
+   },
+   "to": {
+    "block": "1ea6fc48-920d-5589-9c2f-3602a99e504d",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "392f457f-d8a7-5140-b72a-9bb3dc725bc8",
+   "from": {
+    "block": "1ea6fc48-920d-5589-9c2f-3602a99e504d",
+    "port": "result"
+   },
+   "to": {
+    "block": "9849eb09-bbc1-565f-a321-15762d7d902f",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "bae5a65b-8221-5b43-b5da-4f178d9e7536",
+   "from": {
+    "block": "9849eb09-bbc1-565f-a321-15762d7d902f",
+    "port": "result"
+   },
+   "to": {
+    "block": "c5bcb25f-7d15-5ebb-bb92-14c20423238e",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "3e8caba8-03fa-5fa6-a475-7bdbea31a49d",
+   "from": {
+    "block": "5a8d7aa4-e905-59d9-8c64-928c2d084dbe",
+    "port": "value"
+   },
+   "to": {
+    "block": "66ac0182-e2fe-5f37-ab50-c2957df67c9e",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "cd3c24d6-2bcd-58e7-8652-0ab4850ee9d2",
+   "from": {
+    "block": "66ac0182-e2fe-5f37-ab50-c2957df67c9e",
+    "port": "result"
+   },
+   "to": {
+    "block": "32eec3a9-ac42-5570-8ed6-ba3e32067f72",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "a25525f9-60cb-52d0-b87d-1b71b0c0f459",
+   "from": {
+    "block": "32eec3a9-ac42-5570-8ed6-ba3e32067f72",
+    "port": "result"
+   },
+   "to": {
+    "block": "20c77a42-7a5f-5d23-b3a5-bfbb80382892",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "a50b2c9b-6f69-5ed3-843e-e6e49f99f811",
+   "from": {
+    "block": "ae3e9dbb-23ad-56ce-81f2-5cb087728abe",
+    "port": "value"
+   },
+   "to": {
+    "block": "f0c100ce-104d-5dcb-93fe-a2da1760987d",
+    "port": "start"
+   }
+  },
+  {
+   "uuid": "ca81548b-2cb2-5bb9-a454-aeed69c5730e",
+   "from": {
+    "block": "ae3e9dbb-23ad-56ce-81f2-5cb087728abe",
+    "port": "value"
+   },
+   "to": {
+    "block": "f0c100ce-104d-5dcb-93fe-a2da1760987d",
+    "port": "end"
+   }
+  },
+  {
+   "uuid": "2fb87c90-9223-5e9e-ab0e-a51b761b2190",
+   "from": {
+    "block": "f0c100ce-104d-5dcb-93fe-a2da1760987d",
+    "port": "value"
+   },
+   "to": {
+    "block": "432e63c6-e96f-5350-8fee-932c26bc7100",
+    "port": "condition"
+   }
+  },
+  {
+   "uuid": "5d478973-7cdb-500c-b8fd-1a3b33b11906",
+   "from": {
+    "block": "1577dffe-82ad-54c7-bb7a-fad074fbb662",
+    "port": "result"
+   },
+   "to": {
+    "block": "432e63c6-e96f-5350-8fee-932c26bc7100",
+    "port": "then"
+   }
+  },
+  {
+   "uuid": "1ffce73a-84f8-5aa8-ab12-97a60a6a794f",
+   "from": {
+    "block": "432e63c6-e96f-5350-8fee-932c26bc7100",
+    "port": "result"
+   },
+   "to": {
+    "block": "c6a93005-663d-53f4-9328-7b26e9f29fe3",
+    "port": "x"
+   }
+  },
+  {
+   "uuid": "5bfb4ed6-89d7-50f4-ba4d-2c0dd2280a88",
+   "from": {
+    "block": "20c77a42-7a5f-5d23-b3a5-bfbb80382892",
+    "port": "result"
+   },
+   "to": {
+    "block": "37da0070-1a64-542f-bfac-32b22241ab3b",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "62d6d95e-b6f1-5019-9f01-0017ccb15af0",
+   "from": {
+    "block": "c6a93005-663d-53f4-9328-7b26e9f29fe3",
+    "port": "result"
+   },
+   "to": {
+    "block": "12167778-b288-5f00-b800-db7df429fabc",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "5fd7f5e5-39f1-5df4-bc2a-72b61630ce58",
+   "from": {
+    "block": "37da0070-1a64-542f-bfac-32b22241ab3b",
+    "port": "result"
+   },
+   "to": {
+    "block": "12167778-b288-5f00-b800-db7df429fabc",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "cca52ea7-7d95-5208-9867-41ca491c9c6b",
+   "from": {
+    "block": "c5bcb25f-7d15-5ebb-bb92-14c20423238e",
+    "port": "result"
+   },
+   "to": {
+    "block": "4714ce35-6c37-5226-9726-988e59c383b5",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "6485353c-5ff2-5bcf-87d9-4c5012f5868b",
+   "from": {
+    "block": "20c77a42-7a5f-5d23-b3a5-bfbb80382892",
+    "port": "result"
+   },
+   "to": {
+    "block": "4714ce35-6c37-5226-9726-988e59c383b5",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "f8e4b44b-9430-5c8e-8bcd-083031db3b89",
+   "from": {
+    "block": "12167778-b288-5f00-b800-db7df429fabc",
+    "port": "result"
+   },
+   "to": {
+    "block": "2821cef7-a6d2-5414-8839-db2444e1016f",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "d6c56f53-28b9-5faf-a556-581656635a91",
+   "from": {
+    "block": "4714ce35-6c37-5226-9726-988e59c383b5",
+    "port": "result"
+   },
+   "to": {
+    "block": "2821cef7-a6d2-5414-8839-db2444e1016f",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "8bbf9140-eb29-5173-965b-3367b9491b1b",
+   "from": {
+    "block": "f0c100ce-104d-5dcb-93fe-a2da1760987d",
+    "port": "value"
+   },
+   "to": {
+    "block": "09ebb7d4-2474-5920-bce5-ef082fad8bba",
+    "port": "condition"
+   }
+  },
+  {
+   "uuid": "18e18a69-d979-544c-bae1-467b66fc2df1",
+   "from": {
+    "block": "2821cef7-a6d2-5414-8839-db2444e1016f",
+    "port": "result"
+   },
+   "to": {
+    "block": "09ebb7d4-2474-5920-bce5-ef082fad8bba",
+    "port": "then"
+   }
+  },
+  {
+   "uuid": "47dc1af2-223b-5163-857d-65fda6fa9d29",
+   "from": {
+    "block": "1577dffe-82ad-54c7-bb7a-fad074fbb662",
+    "port": "result"
+   },
+   "to": {
+    "block": "ac40a10b-e2aa-560a-b7ed-cb5e92c0fdbe",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "d8495151-a193-5890-9547-71f16bd99d09",
+   "from": {
+    "block": "09ebb7d4-2474-5920-bce5-ef082fad8bba",
+    "port": "result"
+   },
+   "to": {
+    "block": "ac40a10b-e2aa-560a-b7ed-cb5e92c0fdbe",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "b13c8e0c-8a43-5493-9fad-e7d0aac2672f",
+   "from": {
+    "block": "c5bcb25f-7d15-5ebb-bb92-14c20423238e",
+    "port": "result"
+   },
+   "to": {
+    "block": "c81302bc-2eb8-50e4-8642-48a518241dff",
+    "port": "rate"
+   }
+  },
+  {
+   "uuid": "33258b05-5548-598a-acce-92e291ab8f43",
+   "from": {
+    "block": "ac40a10b-e2aa-560a-b7ed-cb5e92c0fdbe",
+    "port": "result"
+   },
+   "to": {
+    "block": "c81302bc-2eb8-50e4-8642-48a518241dff",
+    "port": "cash_flow"
+   }
+  },
+  {
+   "uuid": "d373fecb-bd6e-5c41-9243-abc7c0a5cb82",
+   "from": {
+    "block": "c5bcb25f-7d15-5ebb-bb92-14c20423238e",
+    "port": "result"
+   },
+   "to": {
+    "block": "226d121d-cefd-5d2d-95d5-b67703c7d9ac",
+    "port": "rate"
+   }
+  },
+  {
+   "uuid": "bf83cd15-ddc8-5cbd-8bc1-d595bd04b9e6",
+   "from": {
+    "block": "ac40a10b-e2aa-560a-b7ed-cb5e92c0fdbe",
+    "port": "result"
+   },
+   "to": {
+    "block": "c18dc349-8ad6-5c0a-bbfe-bc7b9159859f",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "a9349501-704e-5d03-b1f3-74fac7aa41bf",
+   "from": {
+    "block": "226d121d-cefd-5d2d-95d5-b67703c7d9ac",
+    "port": "result"
+   },
+   "to": {
+    "block": "c18dc349-8ad6-5c0a-bbfe-bc7b9159859f",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "722ee68b-7f28-50b7-8588-15177e60dab8",
+   "from": {
+    "block": "c18dc349-8ad6-5c0a-bbfe-bc7b9159859f",
+    "port": "result"
+   },
+   "to": {
+    "block": "85ff1a21-47eb-5c7f-a372-d8c792026a0f",
+    "port": "x"
+   }
+  },
+  {
+   "uuid": "65942988-fd7e-5ef7-919f-75b1c1e38f54",
+   "from": {
+    "block": "ac40a10b-e2aa-560a-b7ed-cb5e92c0fdbe",
+    "port": "result"
+   },
+   "to": {
+    "block": "ecbcacbd-1eb4-5188-a4ac-42d65f39be3e",
+    "port": "cash_flow"
+   }
+  },
+  {
+   "uuid": "920482bb-070b-5d2d-9e11-ba6cef1fcf81",
+   "from": {
+    "block": "7775a415-254c-5c2e-bce9-178cd784b64b",
+    "port": "value"
+   },
+   "to": {
+    "block": "ecbcacbd-1eb4-5188-a4ac-42d65f39be3e",
+    "port": "guess"
+   }
+  },
+  {
+   "uuid": "be7e6364-bb16-57ca-82d6-fd01605f10f5",
+   "from": {
+    "block": "ecbcacbd-1eb4-5188-a4ac-42d65f39be3e",
+    "port": "result"
+   },
+   "to": {
+    "block": "678b0f54-e0a7-5e57-ac2a-bee13cf72041",
+    "port": "b"
+   }
+  },
+  {
+   "uuid": "c5d40ef8-598e-5898-868c-afbafe07eae9",
+   "from": {
+    "block": "678b0f54-e0a7-5e57-ac2a-bee13cf72041",
+    "port": "result"
+   },
+   "to": {
+    "block": "5d8ceddf-cb70-518b-898d-f1dc61d1eab1",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "96002820-7aca-5e4e-b327-09ff84eed9d8",
+   "from": {
+    "block": "5d8ceddf-cb70-518b-898d-f1dc61d1eab1",
+    "port": "result"
+   },
+   "to": {
+    "block": "6f792ce3-efa9-542a-b231-a374bba87e6f",
+    "port": "a"
+   }
+  },
+  {
+   "uuid": "f544316f-494c-58d9-8775-0cd282008a1b",
+   "from": {
+    "block": "1b4ed93f-1100-547a-a6fe-edebe1175b5a",
+    "port": "result"
+   },
+   "to": {
+    "block": "62e421d1-5120-5dbe-b922-61523071cf06",
+    "port": "x"
+   }
+  },
+  {
+   "uuid": "283541cc-702d-56c3-803c-bc9c85a93dd3",
+   "from": {
+    "block": "d95c62e9-5647-520a-94f3-0be651344fae",
+    "port": "result"
+   },
+   "to": {
+    "block": "32c92b70-2881-506b-a90b-b4c4b839a58c",
+    "port": "x"
+   }
+  },
+  {
+   "uuid": "033fbda5-7179-5dff-a270-08eda9502e78",
+   "from": {
+    "block": "1577dffe-82ad-54c7-bb7a-fad074fbb662",
+    "port": "result"
+   },
+   "to": {
+    "block": "69881af9-c41c-5e52-9991-106c0263f100",
+    "port": "x"
+   }
+  },
+  {
+   "uuid": "054bfdc9-f716-5316-afa5-1de189d23c51",
+   "from": {
+    "block": "95409f26-1442-56f2-ab8e-1c67d3b271be",
+    "port": "result"
+   },
+   "to": {
+    "block": "21948b89-ee0b-59a8-8ac7-08ef20d6d8be",
+    "port": "x"
+   }
+  }
+ ],
+ "report": [
+  {
+   "block": "ec9daa88-720c-5fe3-8faf-a78c12657a69",
+   "port": "result",
+   "label": "Customers at end of quarter",
+   "format": "#,##0"
+  },
+  {
+   "block": "95409f26-1442-56f2-ab8e-1c67d3b271be",
+   "port": "result",
+   "label": "New customers",
+   "format": "#,##0"
+  },
+  {
+   "block": "31559bf6-710c-59c5-9488-6fb6021eb0e3",
+   "port": "result",
+   "label": "Customers lost",
+   "format": "#,##0"
+  },
+  {
+   "block": "c3e8006e-5078-5543-834a-d6b243c35b4d",
+   "port": "result",
+   "label": "Annual recurring revenue",
+   "format": "$#,##0"
+  },
+  {
+   "block": "1b4ed93f-1100-547a-a6fe-edebe1175b5a",
+   "port": "result",
+   "label": "Revenue",
+   "format": "$#,##0"
+  },
+  {
+   "block": "4139612f-7331-5edf-b493-bc5b7740dda7",
+   "port": "result",
+   "label": "Cost of revenue",
+   "format": "$#,##0"
+  },
+  {
+   "block": "2bdd4424-c6dd-5f57-9b70-10dd1659b3e8",
+   "port": "result",
+   "label": "Gross profit",
+   "format": "$#,##0"
+  },
+  {
+   "block": "ff4771d7-cd18-523d-a691-d047df415d0c",
+   "port": "result",
+   "label": "Gross margin",
+   "format": "0.0%"
+  },
+  {
+   "block": "0d0b0130-4e0c-5ddc-88e9-d041d9efcebb",
+   "port": "result",
+   "label": "Sales and marketing",
+   "format": "$#,##0"
+  },
+  {
+   "block": "610acff2-5990-5bac-9386-358358af9afa",
+   "port": "result",
+   "label": "Research and development",
+   "format": "$#,##0"
+  },
+  {
+   "block": "97e20e39-70bc-5cdd-b176-310236aa4ea0",
+   "port": "result",
+   "label": "General and administrative",
+   "format": "$#,##0"
+  },
+  {
+   "block": "0c14674e-210e-58b3-a697-bf0dbcb8c380",
+   "port": "result",
+   "label": "Operating expenses",
+   "format": "$#,##0"
+  },
+  {
+   "block": "d95c62e9-5647-520a-94f3-0be651344fae",
+   "port": "result",
+   "label": "EBITDA",
+   "format": "$#,##0"
+  },
+  {
+   "block": "8857a4aa-f5a6-5613-a8a2-63dc6413d4af",
+   "port": "result",
+   "label": "EBITDA margin",
+   "format": "0.0%"
+  },
+  {
+   "block": "11e5ce74-9ae9-5649-a376-0bc50504ccc4",
+   "port": "result",
+   "label": "Depreciation",
+   "format": "$#,##0"
+  },
+  {
+   "block": "a09b6b36-becc-5a2a-a78d-83ac02168a5e",
+   "port": "result",
+   "label": "EBIT",
+   "format": "$#,##0"
+  },
+  {
+   "block": "3413f783-213c-5cd5-8f06-3dbe01e718a3",
+   "port": "result",
+   "label": "Income tax",
+   "format": "$#,##0"
+  },
+  {
+   "block": "ac7f526e-c5fe-5362-bb07-2aa126d4b32f",
+   "port": "result",
+   "label": "Net income",
+   "format": "$#,##0"
+  },
+  {
+   "block": "85919ec4-fbdf-5a81-8568-00d926f14acd",
+   "port": "result",
+   "label": "Capex",
+   "format": "$#,##0"
+  },
+  {
+   "block": "e96c68ae-41cc-550c-99e7-5bfba42fff72",
+   "port": "result",
+   "label": "Change in net working capital",
+   "format": "$#,##0"
+  },
+  {
+   "block": "1577dffe-82ad-54c7-bb7a-fad074fbb662",
+   "port": "result",
+   "label": "Free cash flow (unlevered)",
+   "format": "$#,##0"
+  },
+  {
+   "block": "af1a5f3b-707f-5212-865c-91f710760c76",
+   "port": "value",
+   "label": "Equity raised",
+   "format": "$#,##0"
+  },
+  {
+   "block": "de8a5486-8b54-5c23-afe8-6f1d9dcabd0f",
+   "port": "result",
+   "label": "Cash balance",
+   "format": "$#,##0"
+  },
+  {
+   "block": "04e8c1aa-eab9-559b-b1b8-8b55b3f9ecea",
+   "port": "result",
+   "label": "Runway at current burn",
+   "format": "#,##0.0"
+  },
+  {
+   "block": "44fcfb05-1836-5a76-a585-795df5ebaab5",
+   "port": "result",
+   "label": "Customer acquisition cost (fully loaded)",
+   "format": "$#,##0"
+  },
+  {
+   "block": "0dacba46-fb07-5499-aa62-63ccade2e65a",
+   "port": "result",
+   "label": "Lifetime value to CAC",
+   "format": "0.0"
+  },
+  {
+   "block": "815a2f5b-bc8a-5a41-b02f-0219e82d212d",
+   "port": "result",
+   "label": "CAC payback",
+   "format": "#,##0.0"
+  },
+  {
+   "block": "d4fb3bd0-9920-5a3a-9887-515491ddfd5e",
+   "port": "result",
+   "label": "Rule of 40 score",
+   "format": "0.0%"
+  },
+  {
+   "block": "c81302bc-2eb8-50e4-8642-48a518241dff",
+   "port": "result",
+   "label": "NPV",
+   "format": "$#,##0"
+  },
+  {
+   "block": "6f792ce3-efa9-542a-b231-a374bba87e6f",
+   "port": "result",
+   "label": "IRR (annualized)",
+   "format": "0.0%"
+  }
+ ],
+ "scenarios": [
+  {
+   "id": "low-churn-rate-q",
+   "name": "Low quarterly customer churn",
+   "overrides": [
+    {
+     "block": "eb602b26-20d4-5687-9e67-33924eb42268",
+     "inline": {},
+     "settings": {
+      "value": 0.02
+     }
+    }
+   ]
+  },
+  {
+   "id": "high-churn-rate-q",
+   "name": "High quarterly customer churn",
+   "overrides": [
+    {
+     "block": "eb602b26-20d4-5687-9e67-33924eb42268",
+     "inline": {},
+     "settings": {
+      "value": 0.07
+     }
+    }
+   ]
+  },
+  {
+   "id": "low-arpa-monthly",
+   "name": "Low average revenue per account (monthly)",
+   "overrides": [
+    {
+     "block": "1c68097b-603f-5371-9fe2-40cd010418b7",
+     "inline": {},
+     "settings": {
+      "value": 1500
+     }
+    }
+   ]
+  },
+  {
+   "id": "high-arpa-monthly",
+   "name": "High average revenue per account (monthly)",
+   "overrides": [
+    {
+     "block": "1c68097b-603f-5371-9fe2-40cd010418b7",
+     "inline": {},
+     "settings": {
+      "value": 2600
+     }
+    }
+   ]
+  }
+ ],
+ "composites": []
+}

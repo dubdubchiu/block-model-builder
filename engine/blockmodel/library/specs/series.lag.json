@@ -1,0 +1,26 @@
+{
+  "id": "series.lag",
+  "version": 1,
+  "title": "Lag",
+  "category": "Series",
+  "doc": "x shifted n periods later; the first n periods are 0. n can be wired.",
+  "inputs": [
+    {
+      "name": "x",
+      "type": "number"
+    },
+    {
+      "name": "n",
+      "type": "scalar<integer>",
+      "inline": 1
+    }
+  ],
+  "settings": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "series<number>"
+    }
+  ],
+  "impl": "series.lag"
+}

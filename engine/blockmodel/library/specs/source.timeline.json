@@ -1,0 +1,36 @@
+{
+  "id": "source.timeline",
+  "version": 1,
+  "title": "Timeline",
+  "category": "Sources",
+  "doc": "The model timeline: period index t (from 1), period start and end dates, calendar year, fiscal year, and the number of periods.",
+  "inputs": [],
+  "settings": [],
+  "outputs": [
+    {
+      "name": "t",
+      "type": "series<int>"
+    },
+    {
+      "name": "period_start",
+      "type": "series<date>"
+    },
+    {
+      "name": "period_end",
+      "type": "series<date>"
+    },
+    {
+      "name": "year",
+      "type": "series<int>"
+    },
+    {
+      "name": "fiscal_year",
+      "type": "series<int>"
+    },
+    {
+      "name": "periods",
+      "type": "scalar<int>"
+    }
+  ],
+  "impl": "source.timeline"
+}

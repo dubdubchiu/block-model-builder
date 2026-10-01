@@ -1,0 +1,30 @@
+{
+  "id": "math.safe_divide",
+  "version": 1,
+  "title": "Safe divide",
+  "category": "Math",
+  "doc": "a / b, or fallback where b is 0.",
+  "inputs": [
+    {
+      "name": "a",
+      "type": "number"
+    },
+    {
+      "name": "b",
+      "type": "number"
+    },
+    {
+      "name": "fallback",
+      "type": "number",
+      "inline": 0
+    }
+  ],
+  "settings": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "number"
+    }
+  ],
+  "impl": "math.safe_divide"
+}

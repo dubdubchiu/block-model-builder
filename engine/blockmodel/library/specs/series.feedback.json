@@ -1,0 +1,48 @@
+{
+  "id": "series.feedback",
+  "version": 1,
+  "title": "Feedback",
+  "category": "Series",
+  "doc": "The value of x from the previous period; initial in period 1. The one place a wire may loop back, like LabVIEW's feedback node.",
+  "inputs": [
+    {
+      "name": "x",
+      "type": "number",
+      "doc": "The value to carry to the next period. This wire may come from later in the loop."
+    },
+    {
+      "name": "initial",
+      "type": "scalar<number>",
+      "inline": 0,
+      "doc": "The value in period 1."
+    }
+  ],
+  "settings": [
+    {
+      "name": "kind",
+      "type": "str",
+      "default": "float",
+      "options": [
+        "float",
+        "int",
+        "count",
+        "quantity",
+        "percent",
+        "currency"
+      ],
+      "doc": "The kind carried, when initial is typed in rather than wired."
+    },
+    {
+      "name": "unit",
+      "type": "str",
+      "default": null
+    }
+  ],
+  "outputs": [
+    {
+      "name": "value",
+      "type": "series<number>"
+    }
+  ],
+  "impl": "series.feedback"
+}

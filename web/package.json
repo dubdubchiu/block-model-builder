@@ -1,0 +1,32 @@
+{
+  "name": "block-model-builder-web",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "e2e": "npm run build && playwright test",
+    "gen:types": "json2ts -i ../schemas/api.schema.json -o src/api/types.gen.ts --unreachableDefinitions --additionalProperties false --bannerComment \"/* Generated from schemas/api.schema.json by npm run gen:types. Do not edit. */\""
+  },
+  "dependencies": {
+    "@xyflow/react": "^12.12.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "@types/node": "^26.6.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "json-schema-to-typescript": "^16.0.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.1",
+    "vitest": "^5.0.2"
+  }
+}

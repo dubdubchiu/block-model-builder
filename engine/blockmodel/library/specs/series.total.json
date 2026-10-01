@@ -1,0 +1,22 @@
+{
+  "id": "series.total",
+  "version": 1,
+  "title": "Total",
+  "category": "Series",
+  "doc": "The sum of x over all periods.",
+  "inputs": [
+    {
+      "name": "x",
+      "type": "number"
+    }
+  ],
+  "settings": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar<number>"
+    }
+  ],
+  "impl": "series.total",
+  "causal": false
+}

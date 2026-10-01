@@ -1,0 +1,28 @@
+{
+  "id": "finance.irr",
+  "version": 1,
+  "title": "IRR",
+  "category": "Finance",
+  "doc": "Internal rate of return per period, found by bracketing and bisection. guess only chooses between several roots.",
+  "inputs": [
+    {
+      "name": "cash_flow",
+      "type": "number"
+    },
+    {
+      "name": "guess",
+      "type": "scalar<number>",
+      "required": false,
+      "inline": 0.1
+    }
+  ],
+  "settings": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar<percent>"
+    }
+  ],
+  "impl": "finance.irr",
+  "causal": false
+}

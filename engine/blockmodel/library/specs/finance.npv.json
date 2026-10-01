@@ -1,0 +1,26 @@
+{
+  "id": "finance.npv",
+  "version": 1,
+  "title": "NPV",
+  "category": "Finance",
+  "doc": "Net present value like Excel's NPV: period t is discounted by (1 + rate)^t with t from 1. The rate is per period.",
+  "inputs": [
+    {
+      "name": "rate",
+      "type": "scalar<number>"
+    },
+    {
+      "name": "cash_flow",
+      "type": "number"
+    }
+  ],
+  "settings": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar<number>"
+    }
+  ],
+  "impl": "finance.npv",
+  "causal": false
+}

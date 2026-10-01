@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "id": "5b0f3c1e-2d7a-4e8b-9c61-0a4f2e7d9b10",
+  "name": "Demo: price times units plus other income",
+  "timeline": {
+    "start": "2027-01-01",
+    "frequency": "quarter",
+    "periods": 8,
+    "fiscal_year_end": "12-31"
+  },
+  "blocks": [
+    {
+      "uuid": "502cd728-7c8c-43e6-bd27-fa99e7f6ae87",
+      "spec": "source.constant@1",
+      "label": "Price per unit",
+      "settings": {
+        "value": 12.5,
+        "kind": "currency",
+        "unit": "USD/unit",
+        "source": "illustrative"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "uuid": "13d82785-1240-40f4-9ed6-8825fe03e2cd",
+      "spec": "source.series@1",
+      "label": "Units per quarter",
+      "settings": {
+        "values": [
+          40,
+          44,
+          48,
+          52,
+          56,
+          60,
+          64,
+          68
+        ],
+        "kind": "count",
+        "unit": "unit",
+        "source": "illustrative"
+      },
+      "position": {
+        "x": 0,
+        "y": 180
+      }
+    },
+    {
+      "uuid": "5c818392-f705-482c-a78b-cae77ebfc7ed",
+      "spec": "math.multiply@1",
+      "label": "Product revenue",
+      "position": {
+        "x": 290,
+        "y": 80
+      }
+    },
+    {
+      "uuid": "121f5ae3-4f9c-4590-9b58-e332ae7e52b0",
+      "spec": "math.add@1",
+      "label": "Total revenue",
+      "inline": {
+        "b": 150
+      },
+      "position": {
+        "x": 580,
+        "y": 80
+      }
+    }
+  ],
+  "wires": [
+    {
+      "uuid": "7c1e4b2a-9d3f-4a6c-8e05-b2d4f6a8c0e1",
+      "from": {
+        "block": "502cd728-7c8c-43e6-bd27-fa99e7f6ae87",
+        "port": "value"
+      },
+      "to": {
+        "block": "5c818392-f705-482c-a78b-cae77ebfc7ed",
+        "port": "a"
+      }
+    },
+    {
+      "uuid": "7c1e4b2a-9d3f-4a6c-8e05-b2d4f6a8c0e2",
+      "from": {
+        "block": "13d82785-1240-40f4-9ed6-8825fe03e2cd",
+        "port": "value"
+      },
+      "to": {
+        "block": "5c818392-f705-482c-a78b-cae77ebfc7ed",
+        "port": "b"
+      }
+    },
+    {
+      "uuid": "7c1e4b2a-9d3f-4a6c-8e05-b2d4f6a8c0e3",
+      "from": {
+        "block": "5c818392-f705-482c-a78b-cae77ebfc7ed",
+        "port": "result"
+      },
+      "to": {
+        "block": "121f5ae3-4f9c-4590-9b58-e332ae7e52b0",
+        "port": "a"
+      }
+    }
+  ],
+  "report": []
+}

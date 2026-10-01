@@ -1,0 +1,41 @@
+{
+  "id": "logic.compare",
+  "version": 1,
+  "title": "Compare",
+  "category": "Logic",
+  "doc": "a op b, per period: TRUE or FALSE.",
+  "inputs": [
+    {
+      "name": "a",
+      "type": "number",
+      "inline": 0
+    },
+    {
+      "name": "b",
+      "type": "number",
+      "inline": 0
+    }
+  ],
+  "settings": [
+    {
+      "name": "op",
+      "type": "str",
+      "default": ">",
+      "options": [
+        ">",
+        ">=",
+        "<",
+        "<=",
+        "==",
+        "!="
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "bool"
+    }
+  ],
+  "impl": "logic.compare"
+}

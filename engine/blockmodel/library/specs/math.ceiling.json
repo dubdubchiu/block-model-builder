@@ -1,0 +1,21 @@
+{
+  "id": "math.ceiling",
+  "version": 1,
+  "title": "Ceiling",
+  "category": "Math",
+  "doc": "Rounds up to a whole number. Values within 1e-9 relative of a whole number snap to it first, so float noise doesn't add one.",
+  "inputs": [
+    {
+      "name": "x",
+      "type": "number"
+    }
+  ],
+  "settings": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "number"
+    }
+  ],
+  "impl": "math.ceiling"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "source.series",
+  "version": 1,
+  "title": "Series input",
+  "category": "Sources",
+  "doc": "One value per period, entered directly.",
+  "inputs": [],
+  "settings": [
+    {
+      "name": "values",
+      "type": "list",
+      "default": []
+    },
+    {
+      "name": "kind",
+      "type": "str",
+      "default": "float",
+      "options": [
+        "float",
+        "int",
+        "count",
+        "quantity",
+        "percent",
+        "currency",
+        "bool"
+      ]
+    },
+    {
+      "name": "unit",
+      "type": "str",
+      "default": null
+    },
+    {
+      "name": "source",
+      "type": "str",
+      "default": "illustrative",
+      "doc": "Where the figure comes from: a URL with access date, or illustrative."
+    },
+    {
+      "name": "notes",
+      "type": "str",
+      "default": null
+    }
+  ],
+  "outputs": [
+    {
+      "name": "value",
+      "type": "series<any>"
+    }
+  ],
+  "impl": "source.series"
+}

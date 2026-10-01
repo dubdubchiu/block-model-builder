@@ -1,0 +1,25 @@
+{
+  "id": "math.power",
+  "version": 1,
+  "title": "Power",
+  "category": "Math",
+  "doc": "a ^ b. For converting rates, e.g. (1 + annual)^0.25 - 1.",
+  "inputs": [
+    {
+      "name": "a",
+      "type": "number"
+    },
+    {
+      "name": "b",
+      "type": "number"
+    }
+  ],
+  "settings": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "number"
+    }
+  ],
+  "impl": "math.power"
+}

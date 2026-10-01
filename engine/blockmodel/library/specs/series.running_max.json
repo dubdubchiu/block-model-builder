@@ -1,0 +1,21 @@
+{
+  "id": "series.running_max",
+  "version": 1,
+  "title": "Running max",
+  "category": "Series",
+  "doc": "The largest value of x so far, per period.",
+  "inputs": [
+    {
+      "name": "x",
+      "type": "number"
+    }
+  ],
+  "settings": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "series<number>"
+    }
+  ],
+  "impl": "series.running_max"
+}

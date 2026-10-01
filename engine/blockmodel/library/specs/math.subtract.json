@@ -1,0 +1,27 @@
+{
+  "id": "math.subtract",
+  "version": 1,
+  "title": "Subtract",
+  "category": "Math",
+  "doc": "a - b, per period. Currency needs currency in the same code.",
+  "inputs": [
+    {
+      "name": "a",
+      "type": "number",
+      "inline": 0
+    },
+    {
+      "name": "b",
+      "type": "number",
+      "inline": 0
+    }
+  ],
+  "settings": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "number"
+    }
+  ],
+  "impl": "math.subtract"
+}

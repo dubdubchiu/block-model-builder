@@ -1,0 +1,21 @@
+{
+  "id": "finance.discount_factor",
+  "version": 1,
+  "title": "Discount factor",
+  "category": "Finance",
+  "doc": "1 / (1 + rate)^t, with t from 1. The rate is per period.",
+  "inputs": [
+    {
+      "name": "rate",
+      "type": "scalar<number>"
+    }
+  ],
+  "settings": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "series<float>"
+    }
+  ],
+  "impl": "finance.discount_factor"
+}

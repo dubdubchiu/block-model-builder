@@ -1,0 +1,225 @@
+/*
+  Drafting Table design system: tokens and components in one file.
+  Source of truth: https://claude.ai/artifact/32tf4hbYaEZMTpZpZ6scwF
+  Themes: Paper (light) by default, Graphite (dark) when the OS prefers dark.
+  Override with <html data-theme="light"> or <html data-theme="dark">.
+  Fonts: Atkinson Hyperlegible Next and Mono (SIL OFL 1.1), latin subset, in ./fonts.
+*/
+
+@font-face { font-family: "Atkinson Hyperlegible Next"; src: url("./fonts/AtkinsonHyperlegibleNext-Variable.woff2") format("woff2"); font-weight: 200 800; font-style: normal; font-display: swap; }
+@font-face { font-family: "Atkinson Hyperlegible Next"; src: url("./fonts/AtkinsonHyperlegibleNext-VariableItalic.woff2") format("woff2"); font-weight: 200 800; font-style: italic; font-display: swap; }
+@font-face { font-family: "Atkinson Hyperlegible Mono"; src: url("./fonts/AtkinsonHyperlegibleMono-Variable.woff2") format("woff2"); font-weight: 200 800; font-style: normal; font-display: swap; }
+
+/* Paper (light) */
+:root, [data-theme="light"] {
+  color-scheme: light;
+  --paper: #f1f3f4;
+  --sheet: #ffffff;
+  --inset: #e6e9eb;
+  --construction: #dde1e4;
+  --rule: #c9cfd3;
+  --rule-strong: #7d868d;
+  --ink: #1f2428;
+  --ink-muted: #4b545b;
+  --ink-disabled: #9aa2a8;
+  --pencil: #1f4e99;
+  --pencil-soft: #e2e9f4;
+  --on-ink: #ffffff;
+  --danger: #b3261e;
+  --danger-soft: #f8e4e2;
+  --caution: #7a5200;
+  --caution-soft: #f5ecd9;
+  --hatch: #a9b1b7;
+}
+
+/* Graphite (dark), explicit */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #1c1f22;
+  --sheet: #24282c;
+  --inset: #171a1c;
+  --construction: #2b3034;
+  --rule: #394046;
+  --rule-strong: #737d85;
+  --ink: #e3e7ea;
+  --ink-muted: #aab2b9;
+  --ink-disabled: #5d666d;
+  --pencil: #94b0de;
+  --pencil-soft: #233248;
+  --on-ink: #1c1f22;
+  --danger: #f0958b;
+  --danger-soft: #3a2321;
+  --caution: #dcb468;
+  --caution-soft: #33291a;
+  --hatch: #4f575e;
+}
+
+/* Graphite (dark), following the OS unless light is forced */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #1c1f22;
+    --sheet: #24282c;
+    --inset: #171a1c;
+    --construction: #2b3034;
+    --rule: #394046;
+    --rule-strong: #737d85;
+    --ink: #e3e7ea;
+    --ink-muted: #aab2b9;
+    --ink-disabled: #5d666d;
+    --pencil: #94b0de;
+    --pencil-soft: #233248;
+    --on-ink: #1c1f22;
+    --danger: #f0958b;
+    --danger-soft: #3a2321;
+    --caution: #dcb468;
+    --caution-soft: #33291a;
+    --hatch: #4f575e;
+  }
+}
+
+:root {
+  --success: var(--ink);
+  --link: var(--pencil);
+  --focus: var(--pencil);
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --radius-none: 0;
+  --radius-mark: 50%;
+  --stroke-hair: 1px;
+  --stroke-object: 2px;
+  --stroke-focus: 2px;
+  --focus-offset: 2px;
+  --hatch-pitch: 6px;
+  --measure: 70ch;
+  --font-sans: "Atkinson Hyperlegible Next", system-ui, sans-serif;
+  --font-mono: "Atkinson Hyperlegible Mono", ui-monospace, Menlo, monospace;
+}
+
+/* Type styles */
+.text-display { font-family: var(--font-sans); font-size: 36px; line-height: 40px; font-weight: 700; letter-spacing: -0.01em; }
+.text-title { font-family: var(--font-sans); font-size: 24px; line-height: 32px; font-weight: 700; }
+.text-heading { font-family: var(--font-sans); font-size: 18px; line-height: 24px; font-weight: 700; }
+.text-body { font-family: var(--font-sans); font-size: 16px; line-height: 24px; font-weight: 400; }
+.text-small { font-family: var(--font-sans); font-size: 14px; line-height: 20px; font-weight: 400; }
+.mono-data { font-family: var(--font-mono); font-size: 14px; line-height: 20px; font-weight: 400; }
+.mono-annotation { font-family: var(--font-mono); font-size: 13px; line-height: 16px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+
+/* Components */
+
+body { margin: 0; font-family: var(--font-sans); font-size: 16px; line-height: 24px; background: var(--paper); color: var(--ink); }
+.dt-row { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; padding: var(--space-4); }
+.dt-stack { display: grid; gap: var(--space-4); padding: var(--space-4); }
+
+/* Links and focus */
+.dt-link, .dt-prose a { color: var(--link); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.dt-link:hover, .dt-prose a:hover { text-decoration-thickness: 2px; }
+:where(.dt-btn, .dt-tab, .dt-link, .dt-input, .dt-choice input, .dt-prose a):focus-visible { outline: var(--stroke-focus) solid var(--focus); outline-offset: var(--focus-offset); }
+.dt-prose { max-width: var(--measure); }
+
+/* Button */
+.dt-btn { font: inherit; font-size: 16px; line-height: 24px; font-weight: 600; min-height: 40px; padding: 7px var(--space-4); border: var(--stroke-hair) solid var(--rule-strong); border-radius: var(--radius-none); background: var(--sheet); color: var(--ink); cursor: pointer; display: inline-flex; align-items: center; gap: var(--space-2); }
+.dt-btn:hover { background: var(--inset); }
+.dt-btn--primary { background: var(--ink); border-color: var(--ink); color: var(--on-ink); }
+.dt-btn--primary:hover { background: var(--ink-muted); border-color: var(--ink-muted); }
+.dt-btn--quiet { background: transparent; border-color: transparent; }
+.dt-btn--quiet:hover { background: var(--inset); }
+.dt-btn--danger { color: var(--danger); border-color: var(--danger); }
+.dt-btn--danger:hover { background: var(--danger-soft); }
+.dt-btn:disabled, .dt-btn[aria-disabled="true"] { cursor: not-allowed; color: var(--ink-disabled); border-color: var(--rule); background-color: var(--sheet); background-image: repeating-linear-gradient(-45deg, var(--rule) 0 1px, transparent 1px var(--hatch-pitch)); }
+
+/* Text field */
+.dt-field { display: grid; gap: var(--space-1); max-width: 28rem; }
+.dt-field__label { font-size: 14px; line-height: 20px; font-weight: 600; color: var(--ink); }
+.dt-input { font: inherit; font-size: 16px; line-height: 24px; min-height: 40px; box-sizing: border-box; width: 100%; padding: 7px var(--space-3); border: var(--stroke-hair) solid var(--rule-strong); border-radius: var(--radius-none); background: var(--sheet); color: var(--ink); }
+.dt-input::placeholder { color: var(--ink-muted); }
+.dt-input:disabled { color: var(--ink-disabled); border-color: var(--rule); background-image: repeating-linear-gradient(-45deg, var(--rule) 0 1px, transparent 1px var(--hatch-pitch)); }
+.dt-field__help { font-size: 14px; line-height: 20px; color: var(--ink-muted); }
+.dt-field__error { font-size: 14px; line-height: 20px; font-weight: 600; color: var(--danger); }
+.dt-field--error .dt-input { border: var(--stroke-object) solid var(--danger); padding: 6px 11px; }
+
+/* Checkbox and radio */
+.dt-choice { display: inline-flex; gap: var(--space-2); align-items: flex-start; cursor: pointer; font-size: 16px; line-height: 24px; }
+.dt-choice input { appearance: none; -webkit-appearance: none; flex: none; margin: 4px 0 0; width: 16px; height: 16px; border: var(--stroke-object) solid var(--ink); border-radius: var(--radius-none); background: var(--sheet); display: grid; place-content: center; cursor: pointer; }
+.dt-choice input[type="radio"] { border-radius: var(--radius-mark); }
+.dt-choice input[type="checkbox"]:checked { background: var(--ink); }
+.dt-choice input[type="checkbox"]:checked::before { content: ""; width: 8px; height: 4px; border-left: 2px solid var(--on-ink); border-bottom: 2px solid var(--on-ink); transform: translateY(-1px) rotate(-45deg); }
+.dt-choice input[type="radio"]:checked::before { content: ""; width: 6px; height: 6px; border-radius: var(--radius-mark); background: var(--ink); }
+.dt-choice input:disabled { border-color: var(--ink-disabled); background: var(--sheet); cursor: not-allowed; }
+.dt-choice:has(input:disabled) { color: var(--ink-disabled); cursor: not-allowed; }
+
+/* Panel */
+.dt-panel { background: var(--sheet); border: var(--stroke-hair) solid var(--rule-strong); }
+.dt-panel--active { border: var(--stroke-object) solid var(--ink); }
+.dt-panel__head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-3); padding: var(--space-3) var(--space-4); border-bottom: var(--stroke-hair) solid var(--rule); }
+.dt-panel__title { margin: 0; font-size: 18px; line-height: 24px; font-weight: 700; }
+.dt-panel__meta { font-size: 14px; line-height: 20px; color: var(--ink-muted); }
+.dt-panel__body { padding: var(--space-4); }
+
+/* Tabs */
+.dt-tabs { display: flex; flex-wrap: wrap; border-bottom: var(--stroke-hair) solid var(--rule-strong); }
+.dt-tab { font: inherit; font-size: 16px; line-height: 24px; font-weight: 600; margin: 0 0 -1px; padding: 8px var(--space-4) 7px; background: transparent; color: var(--ink-muted); border: var(--stroke-hair) solid transparent; border-top-width: var(--stroke-object); border-radius: var(--radius-none); cursor: pointer; }
+.dt-tab:hover { color: var(--ink); background: var(--inset); }
+.dt-tab[aria-selected="true"] { color: var(--ink); background: var(--sheet); border-color: var(--rule-strong); border-top-color: var(--ink); border-bottom-color: var(--sheet); }
+
+/* Table */
+.dt-table { border-collapse: collapse; width: 100%; background: var(--sheet); font-size: 16px; line-height: 24px; }
+.dt-table caption { text-align: left; font-size: 18px; line-height: 24px; font-weight: 700; padding: 0 0 var(--space-2); }
+.dt-table th { text-align: left; vertical-align: bottom; font-size: 14px; line-height: 20px; font-weight: 700; padding: var(--space-2) var(--space-3); border-bottom: var(--stroke-object) solid var(--ink); }
+.dt-table td { padding: var(--space-2) var(--space-3); border-bottom: var(--stroke-hair) solid var(--rule); }
+.dt-table td.dt-num, .dt-table td.dt-code { font-family: var(--font-mono); font-size: 14px; }
+.dt-table .dt-num { text-align: right; }
+.dt-table tbody tr:hover { background: var(--inset); }
+.dt-table tbody tr[aria-selected="true"] { background: var(--pencil-soft); outline: var(--stroke-object) solid var(--pencil); outline-offset: calc(-1 * var(--stroke-object)); }
+
+/* Tag: status in one to three words, with a square marker */
+.dt-tag { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 13px; line-height: 16px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 7px; border: var(--stroke-hair) solid var(--rule-strong); border-radius: var(--radius-none); background: var(--sheet); color: var(--ink); white-space: nowrap; }
+.dt-tag::before { content: ""; width: 8px; height: 8px; box-sizing: border-box; border: var(--stroke-hair) solid currentColor; }
+.dt-tag--done::before, .dt-tag--danger::before, .dt-tag--caution::before { background: currentColor; }
+.dt-tag--danger { color: var(--danger); border-color: var(--danger); background: var(--danger-soft); }
+.dt-tag--caution { color: var(--caution); border-color: var(--caution); background: var(--caution-soft); }
+
+/* Notice: a full border, never a colored left edge */
+.dt-notice { display: grid; justify-items: start; gap: var(--space-2); padding: var(--space-3) var(--space-4); border: var(--stroke-hair) solid var(--rule-strong); background: var(--sheet); max-width: var(--measure); }
+.dt-notice__text { margin: 0; }
+.dt-notice--danger { border: var(--stroke-object) solid var(--danger); }
+.dt-notice--caution { border: var(--stroke-object) solid var(--caution); }
+
+/* Callout: a boxed label on a leader line that ends in a dot on the thing it names */
+.dt-callout { display: inline-flex; align-items: center; }
+.dt-callout--left { flex-direction: row-reverse; }
+.dt-callout--noted { align-items: flex-start; }
+.dt-callout--noted .dt-callout__leader { margin-top: 12px; }
+.dt-callout__label { font-family: var(--font-mono); font-size: 13px; line-height: 16px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 7px; border: var(--stroke-hair) solid var(--ink); background: var(--sheet); color: var(--ink); white-space: nowrap; }
+.dt-callout__leader { position: relative; flex: none; width: var(--dt-leader, 48px); border-top: var(--stroke-hair) solid var(--ink); }
+.dt-callout__leader::after { content: ""; position: absolute; top: -4px; right: -3px; width: 7px; height: 7px; border-radius: var(--radius-mark); background: var(--ink); }
+.dt-callout--left .dt-callout__leader::after { right: auto; left: -3px; }
+.dt-callout__note { display: block; margin-top: var(--space-1); font-size: 14px; line-height: 20px; color: var(--ink-muted); max-width: 24rem; }
+
+/* Placeholder: dashed edge and hatching mean not built yet */
+.dt-placeholder { display: grid; place-content: center; justify-items: center; gap: var(--space-1); min-height: 120px; padding: var(--space-4); border: var(--stroke-hair) dashed var(--rule-strong); background-color: var(--sheet); background-image: repeating-linear-gradient(-45deg, var(--hatch) 0 1px, transparent 1px var(--hatch-pitch)); text-align: center; }
+.dt-placeholder__label { font-family: var(--font-mono); font-size: 13px; line-height: 16px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 7px; border: var(--stroke-hair) solid var(--rule-strong); background: var(--sheet); color: var(--ink); }
+.dt-placeholder__note { padding: 2px var(--space-2); background: var(--sheet); font-size: 14px; line-height: 20px; color: var(--ink-muted); }
+
+/* Title block: the drawing's identity, every prototype carries one */
+.dt-titleblock { display: grid; grid-template-columns: minmax(12rem, 2fr) repeat(3, minmax(7rem, 1fr)); gap: var(--stroke-hair); background: var(--rule-strong); border: var(--stroke-object) solid var(--ink); max-width: 48rem; }
+.dt-titleblock__cell { background: var(--sheet); padding: 6px 10px 8px; min-width: 0; }
+.dt-titleblock__cell--name { grid-row: span 2; display: flex; flex-direction: column; justify-content: space-between; }
+.dt-titleblock__k { display: block; font-family: var(--font-mono); font-size: 13px; line-height: 16px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
+.dt-titleblock__v { display: block; font-size: 16px; line-height: 24px; font-weight: 600; overflow-wrap: anywhere; }
+.dt-titleblock__v--mono { font-family: var(--font-mono); font-size: 14px; }
+.dt-titleblock__cell--name .dt-titleblock__v { font-size: 18px; line-height: 24px; font-weight: 700; }
+.dt-titleblock__cell--status .dt-titleblock__v { font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; }
+@media (max-width: 40rem) {
+  .dt-titleblock { grid-template-columns: 1fr 1fr; }
+  .dt-titleblock__cell--name { grid-column: 1 / -1; grid-row: auto; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .dt-btn, .dt-tab, .dt-input { transition: background-color 120ms linear, border-color 120ms linear; }
+}

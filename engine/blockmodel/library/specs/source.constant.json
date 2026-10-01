@@ -1,0 +1,55 @@
+{
+  "id": "source.constant",
+  "version": 1,
+  "title": "Constant",
+  "category": "Sources",
+  "doc": "A single value of a chosen kind and unit. Broadcasts across periods where per-period values are expected.",
+  "inputs": [],
+  "settings": [
+    {
+      "name": "value",
+      "type": "any",
+      "default": 0
+    },
+    {
+      "name": "kind",
+      "type": "str",
+      "default": "float",
+      "options": [
+        "float",
+        "int",
+        "count",
+        "quantity",
+        "percent",
+        "currency",
+        "bool",
+        "str",
+        "date"
+      ]
+    },
+    {
+      "name": "unit",
+      "type": "str",
+      "default": null,
+      "doc": "Currency code (USD, or USD/kg for a per-unit price), or a unit label such as kg."
+    },
+    {
+      "name": "source",
+      "type": "str",
+      "default": "illustrative",
+      "doc": "Where the figure comes from: a URL with access date, or illustrative."
+    },
+    {
+      "name": "notes",
+      "type": "str",
+      "default": null
+    }
+  ],
+  "outputs": [
+    {
+      "name": "value",
+      "type": "any"
+    }
+  ],
+  "impl": "source.constant"
+}

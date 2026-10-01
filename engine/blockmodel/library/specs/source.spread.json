@@ -1,0 +1,32 @@
+{
+  "id": "source.spread",
+  "version": 1,
+  "title": "Spread",
+  "category": "Sources",
+  "doc": "amount / periods in each of periods consecutive periods from start; 0 elsewhere.",
+  "inputs": [
+    {
+      "name": "amount",
+      "type": "number",
+      "inline": 0
+    },
+    {
+      "name": "start",
+      "type": "scalar<integer>",
+      "inline": 1
+    },
+    {
+      "name": "periods",
+      "type": "scalar<integer>",
+      "inline": 1
+    }
+  ],
+  "settings": [],
+  "outputs": [
+    {
+      "name": "value",
+      "type": "series<number>"
+    }
+  ],
+  "impl": "source.spread"
+}
